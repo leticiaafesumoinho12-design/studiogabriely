@@ -1,0 +1,98 @@
+/* ===== ESTILOS GERAIS ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf6f8;
+    color: #3d3d3d;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: #eec6d9;
+    padding: 1rem 0;
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* ===== MENU ===== */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b87ba1;
+}
+
+/* ===== CAMPO DE PESQUISA ===== */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 6px 12px;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #b87ba1;
+    /* Rosa dourado */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+    color: #d9a7c7;
+    /* Tom mais claro ao passar o mouse */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+
+
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fae9f0;
+    color: #3d2d34;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.header {
+    background-color: #e9b9cb;
+    padding: 1rem 0;
+    display: flex;
+    border-radius: 10px;
+}
+
+.imagem-logo {
+    height: 80px;
+    align-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b87ba1;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.search-box input {
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    outline: none;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+}
+
+.imagem-botao {
+    width: 50px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    font-size: 0.95em;
+    border-radius: 20px;
+    width: 120px;
+    background: transparent;
+    transition: width 0.3s ease;
+}
+
+.search-container input:focus {
+    width: 180px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.search-container button:hover {
+    color: #f58bb3;
+    transform: scale(1.1);
+}
+.foto{
+    border-radius: 20px;
+}
+
+.sobre h2{
+    padding-top: 30px;
+    padding-left: 550px;
+}
+
+.sobre-gaby {
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+.foto-gaby{
+    border-radius: 20px;
+}
+
+.frase {
+    font-family: "Great Vibes", cursive;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+    font-size: 30px;
+    white-space: nowrap;  
+}
+.servicos {
+    margin-top: 40px;
+}
+
+container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção das duas fotos */
+.top-section {
+    padding: 30pxpx;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    flex: 1 1 45%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img,
+.card .foto-placeholder {
+    width: 50%;
+    height: 50%;
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: 500;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card a {
+    color: #f63ba8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: #f8cddd;
+    color: #6b3f52;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 14px;
+}

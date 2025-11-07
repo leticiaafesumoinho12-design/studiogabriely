@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gabriely Rocha</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Ícone da aba -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <img src="img/logo.png" alt="Logo Gabriely Rocha" class="logo">
+
+            <!-- Botão de menu (mobile) -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Navegação principal -->
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="/pages/sobre.html">Sobre</a></li>
+                    <li><a href="/pages/servico.html">Serviços</a></li>
+                    <li><a href="/pages/contatos.html">Contato</a></li>
+                    <li><a href="/pages/cursosv1.html">Cursos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Campo de busca -->
+            <div class="search-box">
+                <input type="text" placeholder="O que você procura?">
+                <button aria-label="Buscar"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SEÇÃO PRINCIPAL ===== -->
+    <main>
+
+        <!-- ==== COLUNA ESQUERDA ==== -->
+        <div class="left-content">
+            <!-- ===== CARROSSEL DE IMAGENS ===== -->
+            <div class="slideshow-container">
+
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img class="imgslide" src="./img/cilios1.jpeg" alt="Cílios">
+                    <div class="text">Volume brasileiro</div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img class="imgslide" src="./img/sobrancelha2.jpeg" alt="Sobrancelha">
+                    <div class="text">Sobrancelha</div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img class="imgslide" src="./img/cilios3.jpeg" alt="Cílios">
+                    <div class="text">Fox eyes</div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img class="imgslide" src="./img/sobrancelha1.jpeg" alt="Sobrancelha">
+                    <div class="text">Sobrancelha</div>
+                </div>
+            </div>
+
+            <!-- Pontinhos indicadores -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <!-- ===== VÍDEO PROMOCIONAL ===== -->
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="img/ssstik.io_1760550685182.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+            </div>
+
+            <!-- Descrição -->
+            <p class="description">
+                Espaço exclusivo Gabriely Rocha — onde o cuidado e o carinho se encontram.
+            </p>
+        </div>
+
+        <!-- ==== COLUNA DIREITA ==== -->
+        <div class="right-content">
+            <h2>Conheça nosso tour virtual</h2>
+            <p>Em nosso espaço, o conforto encontra a sofisticação.</p>
+            <p>Criamos um refúgio exclusivo, onde cada detalhe foi planejado para seu bem-estar e para realçar sua
+                beleza natural.</p>
+            <p>Do atendimento ao ambiente, tudo é pensado para que você se sinta única e especial.</p>
+
+            <!-- Imagem destacada -->
+            <figure class="image-highlight">
+                <img src="img/salão3.PNG" alt="Espaço Gabriely Rocha">
+                <figcaption>Espaço exclusivo Gabriely Rocha</figcaption>
+            </figure>
+        </div>
+
+
+        <!-- ===== DEPOIMENTOS ===== -->
+        <section class="depoimentos">
+            <h2>O que nossas clientes dizem 💕</h2>
+
+            <div class="testimonials-row">
+                <div class="testimonial-card">
+                    <p>"Amei o atendimento! Minha sobrancelha ficou perfeita, super natural e sem dor! ❤️"</p>
+                    <h4>— Ana Clara</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Ambiente lindo e aconchegante, me senti uma princesa! Voltarei sempre ✨"</p>
+                    <h4>— Mariana Silva</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Melhor alongamento de cílios que já fiz na vida! Durabilidade incrível 😍"</p>
+                    <h4>— Beatriz Santos</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Excelente profissional, super atenciosa e cuidadosa 💗"</p>
+                    <h4>— Júlia Ferreira</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Resultado maravilhoso! Me senti super confiante depois da sessão 😍"</p>
+                    <h4>— Camila Andrade</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer">
+        <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do carrossel -->
+    <script src="./js/script.js"></script>
+
+    <!-- Script para o menu mobile -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.navbar ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>

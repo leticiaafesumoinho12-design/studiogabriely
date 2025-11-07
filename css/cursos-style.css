@@ -1,0 +1,229 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fae9f0;
+    color: #3d2d34;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+/* ===== CABEÇALHO ===== */
+.header {
+    background-color: #e9b9cb;
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* ===== MENU ===== */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #c35a8a;
+}
+
+/* ===== PESQUISA ===== */
+.search-box {
+    background: #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.search-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.imagem-botao {
+    width: 25px;
+}
+
+/* ===== CONTEÚDO ===== */
+main {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== INTRODUÇÃO ===== */
+.intro-curso {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.texto-intro {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-intro h2 {
+    font-size: 2.2em;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.texto-intro p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.img-intro {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LISTA DE CURSOS ===== */
+.lista-cursos h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #f2cde0;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* ===== CARDS ===== */
+.curso-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.curso-card img {
+    width: 250px;
+    border-radius: 15px;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.curso-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.curso-info h3 {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.curso-info p {
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.valor {
+    display: block;
+    color: #d26ca0;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* ===== BOTÃO ===== */
+.btn-inscrever {
+    background-color: #f2cde0;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-inscrever:hover {
+    background-color: #d26ca0;
+    color: #fff;
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+    background-color: #f8e1ec;
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+    margin-top: 60px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+    .curso-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .curso-card img {
+        margin: 0 0 15px 0;
+        width: 80%;
+    }
+
+    .texto-intro,
+    .curso-info {
+        text-align: center;
+    }
+}
