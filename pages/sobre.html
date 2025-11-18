@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,98 +10,196 @@
     <link rel="stylesheet" href="../css/sobre-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+    <!-- ===== CABEÇALHO ===== -->
     <header class="header">
         <div class="container">
             <img src="../img/logo.png" alt="Logo Gabriely Rocha" class="logo">
 
             <nav class="navbar">
-                <ul>
-                    <ul class="menu">
-                        <li><a href="../index.html">Ínicio</a></li>
-                        <li><a href="../pages/sobre.html">Sobre</a></li>
-                        <li><a href="../pages/servico.html">Serviços</a></li>
-                        <li><a href="../pages/contatos.html">Contato</a></li>
-                        <li><a href="../pages/cursosv1.html">Cursos</a></li>
-                    </ul>
+                <ul class="menu">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../pages/sobre.html" class="ativo">Sobre</a></li>
+                    <li><a href="../pages/servico.html">Serviços</a></li>
+                    <li><a href="../pages/contatos.html">Contato</a></li>
+                    <li><a href="../pages/cursosv1.html">Cursos</a></li>
                 </ul>
             </nav>
 
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar..." />
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+            <!-- Campo de busca -->
+            <div class="search-box">
+                <input type="text" placeholder="O que você procura?">
+                <button aria-label="Buscar"><i class="fa fa-search"></i></button>
             </div>
+            <div id="search-results"></div>
+
         </div>
     </header>
+
     <!-- ===== CONTEÚDO PRINCIPAL ===== -->
-    <main class="info">
-
-        <!-- SEÇÃO: SOBRE A GABRIELY -->
-
+    <main>
         <section class="sobre">
-
             <h2>Conheça Gabriely Rocha</h2>
-            <DIV class="sobre-gaby">
-                <img class="foto" src="../img/gabycilios.PNG" alt="Foto de Gabriely Rocha" class="foto-gaby">
-            <p>Gabrielly Rocha é uma microempreendedora dedicada e apaixonada pela área da estética, com especialização em design de sobrancelhas e extensão de cílios. Seu trabalho é guiado pela busca constante pela excelência, qualidade e satisfação de cada cliente, oferecendo um atendimento totalmente personalizado e humanizado.
 
-Com um olhar cuidadoso para os detalhes e uma forte sensibilidade estética, Gabrielly transforma o cuidado com a beleza em uma verdadeira experiência de bem-estar e autoestima. Cada atendimento é planejado de forma única, respeitando o formato do rosto, a expressão e o estilo individual de cada pessoa, garantindo resultados naturais, harmoniosos e duradouros.
+            <div class="sobre-gaby">
+                <img src="../img/gabycilios.PNG" alt="Foto de Gabriely Rocha" class="foto">
+                <p>
+                    Gabrielly Rocha é uma microempreendedora dedicada e apaixonada pela área da estética, especializada
+                    em design de sobrancelhas e extensão de cílios, com mais<strong> de 6 anos de experiência.</strong>
+                    Seu trabalho é
+                    guiado pela busca constante pela excelência, qualidade e satisfação de cada cliente, oferecendo um
+                    atendimento totalmente personalizado e humanizado.
+                    <br><br>
+                    Com um olhar cuidadoso para os detalhes e uma forte sensibilidade estética, Gabrielly transforma o
+                    cuidado com a beleza em uma verdadeira experiência de bem-estar e autoestima. Cada atendimento é
+                    planejado de forma única, respeitando o formato do rosto, a expressão e o estilo individual de cada
+                    pessoa, garantindo resultados naturais, harmônicos e duradouros.
+                    <br><br>
+                    Gabrielly valoriza profundamente a conexão com suas clientes e trabalha de forma personalizada em
+                    diferentes técnicas para realçar a beleza natural de cada mulher. Além de seu talento técnico, ela
+                    preza pelo acolhimento e pela confiança, criando um ambiente agradável e profissional, onde cada
+                    pessoa se sente segura e valorizada.
+                    <br><br>
+                    Sua missão é clara:<strong> fortalecer a autoestima e fazer com que cada mulher se sinta mais
+                        confiante
+                        consigo mesma</strong>, através de um trabalho feito com carinho, cuidado e dedicação.
 
-Além de seu talento técnico, Gabrielly valoriza o acolhimento e a confiança em cada atendimento, criando um ambiente agradável e profissional, onde suas clientes se sentem seguras e valorizadas. Seu compromisso vai além da estética: é sobre realçar a beleza natural, fortalecer a autoconfiança e proporcionar momentos de autocuidado e transformação.
-
-Com dedicação, atualização constante e amor pelo que faz, Gabrielly Rocha se consolida como referência em beleza, mostrando que o toque certo pode fazer toda a diferença na forma como cada pessoa se enxerga e se sente.</p>
-            </DIV>
+                </p>
+            </div>
         </section>
-        <p class="frase">
-            “Mais do que aparência, é a confiança que torna uma mulher bonita.”
-        </p>
+        <h2 class="ambiente">Conheça nosso ambiente</h2>
+        <div class="local">
+            <div class="slideshow-container2">
 
-        <!-- SEÇÃO: SERVIÇOS -->
-        <section class="container">
+                <div class="mySlides2 fade">
+                    <img class="imgslide" src="../img/cantinho.jpeg" alt="cafe">
+
+                </div>
+
+                <div class="mySlides2 fade">
+                    <img class="imgslide" src="../img/parede.jpeg" alt="logo">
+
+                </div>
+
+                <div class="mySlides2 fade">
+                    <img class="imgslide" src="../img/maca.jpeg" alt="maca">
+
+                </div>
+
+
+                <!-- Botões -->
+                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+            </div>
+
+
+
+
+            <div class="texto">
+                <p>O ambiente do nosso studio, é pensado para oferecer conforto, tranquilidade e bem-estar.
+                    <br><br>
+                    O espaço costuma ser organizado, acolhedor e higienizado, com uma decoração leve.
+                    <br><br>
+                    A iluminação é suave, ideal para relaxar, enquanto materiais e equipamentos profissionais garantem
+                    um atendimento seguro e de qualidade.
+                    <br><br>
+                    Cada detalhe é planejado para que a cliente se sinta à vontade e viva uma experiência agradável,
+                    unindo beleza, cuidado e profissionalismo.
+
+                </p>
+            </div>
+        </div>
+        <p class="frase">“Mais do que aparência, é a confiança que torna uma mulher bonita.”</p>
+
+        <!-- ===== SERVIÇOS ===== -->
+        <section class="servicos">
             <h2>Nossos Serviços</h2>
 
-            <div class="top-section">
+            <div class="cards-container" id="meuCard">
                 <div class="card">
-                    <img class="img" src="../img/Capturar10.PNG" alt="Alongamento de cílios">
+                    <img src="../img/Capturar10.PNG" alt="Alongamento de cílios">
                     <p>Realce o seu olhar com alongamento de cílios que traz leveza e elegância.</p>
-                    <a href="" class="link">Saiba mais</a>
+
+                    <div class="escondido">
+                        desenvolvimentooooo
+                    </div>
+
+                    <button onclick="toggleCard()">Ver Mais</button>
+
+
                 </div>
 
-
-                <div class="card">
-                    <img class="img" src="../img/Capturar12.PNG" alt="Design de sobrancelhas">
+                <div class="card" id="meuCard">
+                    <img src="../img/Capturar12.PNG" alt="Design de sobrancelhas">
                     <p>Design de sobrancelhas que valoriza sua beleza natural e harmoniza o rosto.</p>
-                    <a href="" class="link">Saiba mais</a>
-                </div>
-            </div>
 
-            <div class="cards2">
-                <div class="card">
-                    <img class="img" src="../img/curso.PNG" alt="Gabriely Rocha com aluna durante o curso">
+                    <div class="escondido">
+                        desenvolvimentooooo
+                    </div>
+
+                    <button onclick="toggleCard()">Ver Mais</button>
+                </div>
+
+                <div class="card" id="meuCard">
+                    <img src="../img/curso.PNG" alt="Curso de design de sobrancelhas">
                     <p>Cursos com certificação para quem quer se destacar no mundo da beleza.</p>
-                    <a href="cursosv1.html" class="link">Saiba mais</a>
+                    <div class="escondido">
+                        desenvolvimentooooo
+                    </div>
+
+                    <button onclick="toggleCard()">Ver Mais</button>
                 </div>
             </div>
-
         </section>
     </main>
-     
+    <!-- Botão Flutuante do WhatsApp -->
+    <div id="modal" class="faq-content">
+        <p>Perguntas frequentes</p>
+
+        <p class="per">É normal os cílios naturais caírem?</p>
+        <p class="res">É normal cair, faz parte do processo de renovação dos pelos, e não existe um número exato
+            por dia. A cada 4 meses, em média, o pelo cai e nasce um outro no lugar. As extensões, colocadas de
+            forma correta, não influenciam em nada este ciclo. Elas cairão juntamente com os fios naturais.</p>
+        <br>
+
+        <p class="per">Pode usar máscara de cílios?</p>
+        <p class="res">Se forem à base de água, sim. Porém não há necessidade, pois as extensões de cílios
+            substituem completamente o uso da máscara, dando maior praticidade ao seu dia-a-dia.</p>
+        <br>
+
+        <p class="per">Qual a durabilidade da extensão de cílios?</p>
+        <p class="res">Não há uma regra, pois a durabilidade está diretamente ligada ao ciclo de crescimento dos
+            cílios naturais e dos cuidados recomendados para as extensões. Porém para manter os cílios sempre
+            impecáveis e bonitos sugerimos manutenções entre 15 e 20 dias após a primeira aplicação.</p>
+        <br>
+
+        <p class="per">Como cuidar do alongamento de cílios?</p>
+        <p class="res">Para manter suas extensões sempre bonitas é necessário seguir alguns cuidados como: lave
+            os olhos com shampoo de bebê pelo menos 3 vezes por semana, retire sempre todo o resíduo de
+            maquiagem, escove as extensões para mantê-las alinhadas, evite o uso de máscara de cílios ou
+            produtos à base de óleo e evite coçar os olhos. Seguindo essas regrinhas, com certeza sua extensão
+            durará por muito mais tempo.</p>
+        <br>
+
+        <p class="per">O que é henna? Quanto tempo dura?</p>
+        <p class="res">A henna é um corante natural extraído de uma planta transformado em pó, serve para
+            preencher falhas temporariamente, dura entre 3 e 15 dias</p>
+        <br>
+    </div>
+    <!-- Botão para abrir/fechar -->
+    <button onclick="toggleFAQ()" class="faq-float">
+        <img src="../img/faq.png" alt="Fale conosco" class="faq">
+    </button>
+
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="rodape">
         <p>© 2025 Gabriely Rocha - Todos os direitos reservados</p>
     </footer>
 
-    <main class="infor">
-        <div class="info1">
-            <img src="../img/" alt="">
-        </div>
-    </main>
+    <script src="../js/sobre-script.js"></script>
 </body>
 
 </html>

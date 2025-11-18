@@ -1,73 +1,3 @@
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fae9f0;
-    color: #3d2d34;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* ===== CABEÇALHO ===== */
-.header {
-    background-color: #e9b9cb;
-    padding: 1rem 0;
-    border-radius: 10px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* ===== BARRA DE PESQUISA ===== */
-.search-container {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.search-container input {
-    border: none;
-    outline: none;
-    padding: 6px 10px;
-    font-size: 0.95em;
-    border-radius: 20px;
-    width: 120px;
-    background: transparent;
-    transition: width 0.3s ease;
-}
-
-.search-container input:focus {
-    width: 180px;
-}
-
-.search-container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #555;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.search-container button:hover {
-    color: #f58bb3;
-    transform: scale(1.1);
-}
-
 /* ===== CONTEÚDO PRINCIPAL ===== */
 main {
     padding: 60px 20px;
@@ -119,6 +49,7 @@ main {
     line-height: 1.8;
 }
 
+/* ===== IMAGENS DE SERVIÇOS ===== */
 .servico-imagens {
     display: flex;
     gap: 10px;
@@ -140,7 +71,7 @@ main {
     transform: scale(1.05);
 }
 
-/* =====  TABELA DE PREÇOS ===== */
+/* ===== TABELA DE PREÇOS ===== */
 .tabela-precos {
     background-color: #fff;
     border-radius: 25px;
@@ -168,7 +99,7 @@ main {
     padding-bottom: 8px;
 }
 
-/* ===== ESTILO DA TABELA ===== */
+/* ===== ESTILO DA TABELA PADRÃO (DESKTOP/TABLET) ===== */
 .tabela-precos table {
     width: 100%;
     border-collapse: separate;
@@ -197,81 +128,70 @@ main {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.tabela-precos tr:last-child td {
-    border-bottom: none;
-}
-
 .tabela-precos tr:hover td {
     background-color: #ffeef7;
     transform: scale(1.01);
 }
 
-.tabela-precos td:last-child {
-    font-weight: 700;
-    color: #d26ca0;
-    font-size: 1.05em;
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-    background-color: #f8e1ec;
+/* ===== SEÇÃO DE DICAS ===== */
+.dicas {
+    background-color: #fff6f8;
+    padding: 60px 20px;
     text-align: center;
-    padding: 25px 0;
-    color: #333;
-    margin-top: 60px;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 900px) {
-    .servico {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .servico-imagens img {
-        max-width: 80%;
-    }
-
-    .tabela-precos {
-        padding: 25px;
-    }
-
-    .tabela-precos table {
-        font-size: 0.95em;
-    }
+.dicas h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+.dicas-intro {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
 
-/* Tablets */
+.dicas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dica-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================== */
+/* RESPONSIVO            */
+/* ============================== */
+
+/* Tablets (até 1024px) */
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .navbar ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .search-container {
-        margin-top: 10px;
-    }
-
+    /* Ajuste para quebra em coluna, mas com imagens lado a lado ainda */
     .servico {
         flex-direction: column;
         text-align: center;
     }
 
+    /* Permite 2 imagens lado a lado */
     .servico-imagens img {
-        max-width: 80%;
+        max-width: 48%;
     }
 
     .tabela-precos {
@@ -279,40 +199,9 @@ footer {
     }
 }
 
-/* Celulares grandes */
+/* Celulares grandes (até 768px) */
 @media (max-width: 768px) {
-    .header {
-        padding: 1rem;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .search-container {
-        width: 80%;
-        justify-content: center;
-    }
-
-    .search-container input {
-        width: 100%;
-    }
-
-    .servico-texto h2 {
-        font-size: 1.8em;
-    }
-
-    .servico-texto p {
-        font-size: 1em;
-    }
-
+    /* Força as imagens para coluna em telas menores */
     .servico-imagens {
         flex-direction: column;
         gap: 15px;
@@ -322,121 +211,120 @@ footer {
         max-width: 90%;
     }
 
+    .servico-texto h2 {
+        font-size: 1.8em;
+    }
+
+    .servico-texto p {
+        font-size: 1em;
+    }
+    
+    /* Faz os cards de dicas ficarem em coluna */
+    .dicas-container {
+        grid-template-columns: 1fr;
+    }
+
     .tabela-precos table {
         font-size: 0.9em;
+    }
+
+    .dicas {
+        padding: 40px 15px;
+    }
+
+    .dicas h2 {
+        font-size: 1.6rem;
     }
 }
 
 /* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-    .logo {
-        width: 120px;
+    
+    /* --- Responsividade da Tabela: Transforma em Cartão --- */
+
+    .tabela-precos {
+        padding: 20px 10px;
     }
 
-    .navbar ul {
-        display: none;
-        /* esconde o menu padrão */
+    .tabela-precos thead {
+        display: none; /* Esconde o cabeçalho original */
     }
 
-    /* ícone hambúrguer */
-    .menu-toggle {
-        display: block;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #333;
-        background: none;
-        border: none;
-    }
-
-    /* quando ativo */
-    .navbar.active ul {
-        display: flex;
-        flex-direction: column;
-        background: #f8e1ec;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        padding: 15px 0;
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .search-container {
-        width: 100%;
-    }
-
-    /* tabela rolável no mobile */
     .tabela-precos table {
+        border-spacing: 0;
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+    }
+    
+    .tabela-precos tr {
+        display: block; /* Linha vira um bloco (cartão) */
+        margin-bottom: 20px;
+        border: 1px solid #f4cfe0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        background-color: #fff8fb;
     }
 
-    .tabela-precos th,
     .tabela-precos td {
-        padding: 12px 10px;
+        display: block; /* Célula vira um bloco de informação */
+        text-align: right;
+        padding: 10px 15px;
+        border: none;
+        position: relative;
+        padding-left: 50%; /* Espaço para o rótulo */
+        font-size: 1em;
     }
 
-    .footer {
-        font-size: 0.8em;
-    }
-}
-
-/* ===== ESTILO DO MENU HAMBURGUER (IGUAL AO INDEX) ===== */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    color: #333;
-    cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    /* Rótulo virtual usando data-label do HTML */
+    .tabela-precos td:before {
+        content: attr(data-label) ":";
         position: absolute;
-        right: 25px;
-        top: 25px;
-        z-index: 1000;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 700;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        text-align: left;
+    }
+    
+    /* Destaque para o nome do Serviço (primeiro TD) */
+    .tabela-precos tr td:first-child {
+        font-size: 1.1em;
+        font-weight: 700;
+        background-color: #f2cde0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #000;
+        text-align: center; /* Centraliza o nome do serviço */
+        padding-left: 15px;
+    }
+    
+    /* Remove o rótulo do nome do serviço */
+    .tabela-precos tr td:first-child:before {
+        content: ""; 
+    }
+    
+    /* Destaque para o Preço (último TD) */
+    .tabela-precos tr td:last-child {
+        background-color: #f8d8e7;
+        font-weight: 700;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .tabela-precos tr:hover td {
+        background-color: #fff8fb;
+        transform: none;
+    }
+    
+    /* Outros ajustes de mobile */
+    .servico-imagens img {
+        max-width: 100% !important;
     }
 
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #EEC6D9;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        padding: 20px 0;
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        gap: 15px;
-    }
-
-    .navbar.active ul {
-        display: flex;
-        animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .search-container {
-        margin-top: 10px;
-        width: 90%;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .servico-texto h2 {
+        font-size: 1.5em;
     }
 }

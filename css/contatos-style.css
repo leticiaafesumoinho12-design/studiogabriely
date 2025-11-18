@@ -1,100 +1,16 @@
-/* Reset e base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fae9f0;
-    color: #3d2d34;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Cabeçalho */
-.header {
-    background-color: #e9b9cb;
-    padding: 1rem 0;
-    border-radius: 10px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* ===== BARRA DE PESQUISA ===== */
-.search-container {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.search-container input {
-    border: none;
-    outline: none;
-    padding: 6px 10px;
-    font-size: 0.95em;
-    border-radius: 20px;
-    width: 120px;
-    background: transparent;
-    transition: width 0.3s ease;
-}
-
-.search-container input:focus {
-    width: 180px;
-}
-
-.search-container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #555;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.search-container button:hover {
-    color: #f58bb3;
-    transform: scale(1.1);
-}
-
-
-/* Formulário */
+/* ===== FORMULÁRIO ===== */
 .formulario {
     background-color: rgb(245, 236, 244);
     text-align: left;
     width: 900px;
-    max-width: 90%;
+    max-width: 95%;
     padding: 40px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    border-radius: 12px;
     border: solid 6px #eec6d9;
-    font-size: 13px;
-    box-shadow: 0px 5px 15px rgb(107, 103, 103);
+    font-size: 14px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
-
-/*Fale conosco*/
-.formulario h2 {
-    margin-bottom: 20px;
-    color: #c9a9a9;
-}
-
-
-
 
 .formulario input {
     width: 100%;
@@ -103,227 +19,244 @@ body {
     border: 3px solid #eec6d9;
     border-radius: 20px;
     font-size: 1em;
-    box-shadow: 0px 5px 3px rgb(204, 198, 198);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
     outline: none;
+    transition: .3s;
 }
 
 .formulario input:focus {
     border-color: #e987ca;
-    transition: 5ms;
-    box-shadow: 0px 5px 3px rgb(85, 83, 83);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
 }
 
 .form-group {
-    padding: 20px;
-    font-size: larger;
-
+    padding: 18px;
+    font-size: 1rem;
 }
-
-
-
-
-
-.footer {
-
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #eec6d9;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 25px;
-
-}
-
 
 .fale-conosco {
     text-align: center;
-    justify-content: center;
-    margin-top: 60px;
-
+    margin-top: 40px;
 }
 
+
+
+/* CARD PRINCIPAL */
+.experiencia-container {
+    background: #f7d4db;
+    padding: 25px;
+    border-radius: 18px;
+    max-width: 420px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(178, 83, 120, .15);
+    border: 1px solid rgba(178, 83, 120, .15);
+}
+
+/* TÍTULO */
+.experiencia-container h2 {
+    color: #a14463;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* TEXTOS */
+.experiencia-container p {
+    color: #6d4b52;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* BOXES INTERNOS */
+.info-box {
+    background: #fce8ec;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border: 1px solid rgba(178, 83, 120, 0.15);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* ÍCONES */
+.info-box i {
+    font-size: 18px;
+    color: #a14463;
+}
+
+/* LINK AGENDAR */
+.agende-link {
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    color: #a14463;
+    text-decoration: underline;
+}
+
+/* ÍCONES REDES SOCIAIS */
+/* Instagram gradiente */
+.instagram i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #ffb548 45%, #fc5e62 60%, #a745c3 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 26px;
+    display: inline-block;
+}
+
+/* WhatsApp */
+.whatsapp i {
+    color: #25D366;
+    font-size: 28px;
+}
+
+
+/* Centraliza completamente o bloco */
+.primeira-sessao {
+    text-align: center;
+}
+
+/* Centraliza as opções */
+.opcoes-sessao {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+/* Esconde o rádio */
+.opcoes-sessao input[type="radio"] {
+    display: none;
+}
+
+/* ================================
+   🌸 BOTÃO ENVIAR
+   ================================ */
 .botao-enviar {
-    background-color: #fad0e4;
-    color: rgb(49, 46, 46);
-    border: none;
-    padding: 10px 25px;
+    background-color: #eebbce;
+    color: #4a3c3c;
+    border: transparent;
+    padding: 12px 26px;
     font-size: 16px;
-    border-radius: 15px;
+    font-weight: 600;
+    border-radius: 22px;
     cursor: pointer;
-    display: block;
-    margin: 15px auto;
-    border: solid 3px rgba(236, 204, 228, 0.897);
-    box-shadow: 0px 3px 10px rgba(146, 145, 145, 0.575);
     font-family: 'Quicksand', sans-serif;
-
-
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+    display: block;
+    margin: 30px auto 10px auto;
+    /* centraliza */
+    width: 180px;
 }
 
 .botao-enviar:hover {
-    background: linear-gradient(to bottom, #f8e5ed, #ff97ba);
-    transform: scale(1.05);
+    background: linear-gradient(to bottom, #f9e7f0, #ff9bc2);
+    border-color: #e987ca;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
 }
 
 
+/* ================================
+   🌸 BOTÕES SIM / NÃO (Primeira Sessão)
+   ================================ */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
-
-
-.menu-lateral {
+/* Centralizar o grupo */
+.opcoes-sessao {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    border-radius: 0 15px 15px 0;
-    box-shadow: 0px 0px 12px rgba(61, 59, 59, 0.205);
-
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
 }
 
-.menu-lateral h2 {
-    color: #424242;
-    font-size: 20px;
-    margin-bottom: 10px;
+/* Ocultar radio */
+.opcoes-sessao input[type="radio"] {
+    display: none;
 }
 
-.link {
-    display: block;
-    width: 50%;
-    text-decoration: none;
-    color: rgb(65, 62, 62);
-    padding: 15px 0;
+/* Estilo dos botões */
+.botao-sessao {
+    background: #fbe5f1;
+    color: #4a3c3c;
+    border: 3px solid #eec6d9;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
     border-radius: 20px;
-    transition: all 0.3s ease;
-    text-align: center;
-    margin-bottom: 10px;
-
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: inline-block;
 }
 
-.link:hover {
-    background: linear-gradient(to bottom, #f8e5ed, #fcb6ce);
-    transform: scale(1.05);
+/* Hover */
+.botao-sessao:hover {
+    background: linear-gradient(to bottom, #f9e7f0, #ff9bc2);
+    border-color: #f5b5e1;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
 }
 
-.instagram {
-    background-color: #fad0e4;
-
-}
-
-.whatsapp {
-    background-color: #fad0e4;
-
-}
-
-main {
-    margin-left: 220px;
-    padding: 40px;
-}
-
-
-.imagem-gabriely {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 10px;
+/* Quando selecionado */
+.opcoes-sessao input[type="radio"]:checked+.botao-sessao {
+    background: linear-gradient(to bottom, #ffe4f1, #ff8bb7);
+    border-color: #f89dcf;
+    color: #4e2f3e;
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 9px 20px rgba(0, 0, 0, 0.35);
 }
 
 
 
 
+/* ===== RESPONSIVIDADE ===== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 992px) {
+    .formulario {
+        padding: 30px;
+    }
+}
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .logo {
-        height: 70px;
-        margin-bottom: 10px;
-    }
-
-    .search-container {
-        margin-top: 10px;
-        width: 80%;
-        justify-content: center;
-    }
-
     .formulario {
-        width: 95%;
-        padding: 25px;
-        margin: 30px auto;
+        padding: 22px;
+        font-size: 14px;
     }
 
-    .formulario h2 {
-        font-size: 1.4em;
+    .extra-content {
+        padding: 22px;
         text-align: center;
+    }
+
+    .info-card {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icones-redes {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .formulario {
-        padding: 20px;
+        padding: 15px;
     }
 
-    .formulario input {
-        font-size: 0.9em;
+    .form-group {
+        padding: 8px;
     }
 
-    .navbar ul {
-        gap: 5px;
+    .botao-enviar {
+        width: 100%;
     }
 
-    .search-container input {
-        width: 100px;
+    .info-card {
+        flex-direction: column;
+        text-align: center;
     }
 }

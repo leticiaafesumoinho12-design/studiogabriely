@@ -11,7 +11,7 @@ body {
 header {
     background-color: #eec6d9;
     padding: 1rem 0;
-    
+
 }
 
 .container {
@@ -39,7 +39,7 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -48,51 +48,74 @@ header {
     color: #b87ba1;
 }
 
-/* ===== CAMPO DE PESQUISA ===== */
+/* BUSCA */
 .search-box {
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background: #fff;
     border-radius: 25px;
-    padding: 6px 12px;
-    width: 220px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.search-box:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 5px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .search-box input {
-    flex: 1;
     border: none;
     outline: none;
-    padding: 8px;
-    background: transparent;
-    font-size: 0.95rem;
-    color: #333;
+    padding: 6px 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 150px;
 }
 
 .search-box button {
     background: none;
     border: none;
-    color: #b87ba1;
-    /* Rosa dourado */
-    font-size: 1rem;
+    color: #a6527a;
     cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 16px;
 }
 
-.search-box button:hover {
-    color: #d9a7c7;
-    /* Tom mais claro ao passar o mouse */
+/* RESULTADOS DA BUSCA */
+#search-results {
+    position: absolute;
+    background: #fff;
+    width: 230px;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    margin-top: 8px;
+    display: none;
+    max-height: 240px;
+    overflow-y: auto;
+    animation: fadeIn .25s ease;
+    z-index: 10;
 }
-.search-container {
+
+#search-results .item {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#search-results .item:hover {
+    background: #f3d6da;
+}
+
+#search-results i {
+    color: #a6527a;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #e9b9cb;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: #3d2d34;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }

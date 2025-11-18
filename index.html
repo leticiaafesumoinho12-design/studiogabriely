@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- ===== CABEÇALHO ===== -->
+    <!-- =====  CABEÇALHO ===== -->
     <header class="header">
         <div class="container">
             <!-- Logo -->
@@ -45,6 +45,8 @@
                 <input type="text" placeholder="O que você procura?">
                 <button aria-label="Buscar"><i class="fa fa-search"></i></button>
             </div>
+            <div id="search-results"></div>
+          
         </div>
     </header>
 
@@ -94,9 +96,9 @@
             </div>
 
             <!-- ===== VÍDEO PROMOCIONAL ===== -->
-            <div class="video-container">
+            <div class="vAideo-container">
                 <video controls autoplay muted loop>
-                    <source src="img/ssstik.io_1760550685182.mp4" type="video/mp4">
+                    <source src="img/studio.mp4" type="video/mp4">
                     Seu navegador não suporta vídeos HTML5.
                 </video>
             </div>
@@ -115,13 +117,51 @@
                 beleza natural.</p>
             <p>Do atendimento ao ambiente, tudo é pensado para que você se sinta única e especial.</p>
 
+
             <!-- Imagem destacada -->
             <figure class="image-highlight">
-                <img src="img/salão3.PNG" alt="Espaço Gabriely Rocha">
+                <img src="img/cantinho.jpeg" alt="Espaço Gabriely Rocha">
                 <figcaption>Espaço exclusivo Gabriely Rocha</figcaption>
             </figure>
-        </div>
 
+
+            <!-- ===== ADIÇÕES AQUI ===== -->
+            <div class="extra-content">
+                <h3> Experiência Premium</h3>
+                <p>Ambiente climatizado, música ambiente e o melhor atendimento personalizado.</p>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <p><strong>Horário de funcionamento:</strong><br>Segunda a Sábado, das 9h às 19h</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <p><strong>Endereço:</strong><br>R. Rui Barbosa, 401 - Cotia, SP, 06702-415</p>
+                </div>
+                <p class="agendar-horario">
+                    <i class="fa-solid fa-calendar-check agendar-icone"></i>
+                    <a href="/pages/contatos.html" class="link-agendamento">Agende seu horário</a>
+                </p>
+
+                <h4 class="siga-nos-titulo">Entre em contato:</h4>
+
+                <div class="icones-redes">
+                    <!-- Link do Instagram -->
+                    <a href="https://www.instagram.com/gabrielyrochabeauty/" target="_blank"
+                        class="icone-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- Link do WhatsApp -->
+                    <a href="https://wa.me/5511997326767" target="_blank" class="icone-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
 
         <!-- ===== DEPOIMENTOS ===== -->
         <section class="depoimentos">
@@ -160,9 +200,6 @@
             </div>
         </section>
 
-
-
-
     </main>
 
     <!-- ===== RODAPÉ ===== -->
@@ -170,18 +207,11 @@
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script do carrossel -->
+
+
+
     <script src="./js/script.js"></script>
 
-    <!-- Script para o menu mobile -->
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.navbar ul');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-    </script>
 </body>
 
 </html>

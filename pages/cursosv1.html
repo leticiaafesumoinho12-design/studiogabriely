@@ -27,12 +27,13 @@
                 </ul>
             </nav>
 
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar..." />
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+           <!-- Campo de busca -->
+            <div class="search-box">
+                <input type="text" placeholder="O que você procura?">
+                <button aria-label="Buscar"><i class="fa fa-search"></i></button>
             </div>
+            <div id="search-results"></div>
+
         </div>
     </header>
 
@@ -90,6 +91,8 @@
     <footer class="footer">
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="../js/cursos-script.js"></script>
 </body>
 
 </html>
