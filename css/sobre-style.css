@@ -6,7 +6,7 @@
 
 .sobre h2 {
     margin-bottom: 40px;
-    color: #3d2d34;
+    color: #b25770;
 }
 
 
@@ -40,6 +40,7 @@ strong {
     text-align: center;
     font-size: 1.5rem;
     padding: 50px;
+    color: #b25770;
 }
 
 .local {
@@ -57,14 +58,16 @@ strong {
 /* ===== FRASE ===== */
 .frase {
     font-family: "Great Vibes", cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     color: #4a2c3b;
     margin: 50px auto;
     max-width: 600px;
     white-space: nowrap;
 }
-
+.ser{
+    color: #b25770;
+}
 /* ===== SERVIÇOS ===== */
 .servicos {
     text-align: center;
@@ -87,7 +90,6 @@ strong {
 .card {
     background-color: #fff;
     border-radius: 15px;
-    height: 300px;
     width: auto;
     padding: 20px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -129,10 +131,11 @@ strong {
     margin: 15px 0;
 }
 
-.card button {
+.link{
     background-color: #ff6fa8;
     /* cor rosa suave */
     color: #fff;
+    text-decoration: none;
     /* texto branco */
     padding: 6px 12px;
     /* tamanho do botão */
@@ -147,7 +150,7 @@ strong {
     /* animação suave */
 }
 
-.card button:hover {
+.link:hover {
     background-color: #ff4e93;
     /* cor mais forte no hover */
     transform: scale(1.05);
@@ -188,6 +191,7 @@ strong {
     /* mantém proporção e preenche o espaço */
     border-radius: 15px;
 }
+
 
 /* Texto sobre a imagem */
 .text {
@@ -233,130 +237,7 @@ strong {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/*FAQ MODAL*/
 
-/* Estado inicial - escondido */
-.faq-content {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease;
-    z-index: 9998;
-    padding: 0;
-}
-
-/* Quando aparecer */
-.faq-content.fac-show {
-    width: 350px;
-    height: auto;
-    max-height: 80vh;
-    opacity: 1;
-    padding: 25px;
-    overflow-y: auto;
-    animation: slideInFromRight 0.4s ease-out;
-}
-
-/* Animação de entrada */
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%) scale(0.8);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0) scale(1);
-        opacity: 1;
-    }
-}
-
-/* Título */
-.faq-content > p:first-child {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #cd316f;
-    text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #cd316f;
-}
-
-/* Perguntas */
-.faq-content .per {
-    font-weight: 600;
-    color: #cd316f;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-/* Respostas */
-.faq-content .res {
-    color: #666;
-    font-size: 0.9rem;
-    text-align: justify;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Botão flutuante FAQ */
-.faq-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 9999;
-}
-
-.faq-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(211, 37, 124, 0.6);
-}
-
-.faq-float img {
-    width: 60px;
-    height: 60px;
-}
-
-/* Esconde o botão quando o modal está aberto */
-.faq-content.fac-show ~ .faq-float {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Scrollbar personalizada */
-.faq-content.fac-show::-webkit-scrollbar {
-    width: 8px;
-}
-
-.faq-content.fac-show::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-.faq-content.fac-show::-webkit-scrollbar-thumb {
-    background: #cd316f;
-    border-radius: 10px;
-}
-
-.faq-content.fac-show::-webkit-scrollbar-thumb:hover {
-    background: #ff6fa8;
-}
 
 /* Responsividade */
 @media (max-width: 480px) {
@@ -375,4 +256,105 @@ strong {
     padding: 15px;
     font-size: 14px;
     border-top: 1px;
+}
+/* ===================== */
+/*  RESPONSIVIDADE GERAL */
+/* ===================== */
+
+/* ============================= */
+
+@media (max-width: 1100px) {
+    .sobre-gaby {
+        display: flex;
+        flex-direction: column; /* imagem em cima */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .sobre-gaby .foto {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .sobre-gaby p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    /* ----------- Ambiente ----------- */
+
+    .local {
+        display: flex;
+        flex-direction: column; /* imagem em cima */
+        padding: 8px;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .slideshow-container2 {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .texto p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
+
+
+
+/* ===================== */
+/*   TELAS MENORES       */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    .sobre h2,
+    .ambiente,
+    .ser {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .frase {
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .faq-float {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* ===================== */
+/*   TELAS MUITO PEQUENAS */
+/* ===================== */
+
+@media (max-width: 480px) {
+    .sobre-gaby p,
+    .texto p {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
 }

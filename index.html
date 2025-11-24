@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Ícone da aba -->
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
 
     <!-- Ícones (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -24,29 +24,30 @@
             <!-- Logo -->
             <img src="img/logo.png" alt="Logo Gabriely Rocha" class="logo">
 
-            <!-- Botão de menu (mobile) -->
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fa fa-bars"></i>
-            </button>
-
             <!-- Navegação principal -->
             <nav class="navbar">
                 <ul class="menu">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="/pages/sobre.html">Sobre</a></li>
-                    <li><a href="/pages/servico.html">Serviços</a></li>
-                    <li><a href="/pages/contatos.html">Contato</a></li>
-                    <li><a href="/pages/cursosv1.html">Cursos</a></li>
+                    <li><a href=".index.html" class="ativo">Início</a></li>
+                    <li><a href="./pages/sobre.html">Sobre</a></li>
+                    <li><a href="./pages/servico.html">Serviços</a></li>
+                    <li><a href="./pages/contatos.html">Contato</a></li>
+                    <li><a href="./pages/curso.html">Cursos</a></li>
                 </ul>
             </nav>
 
+            <!-- Botão Hambúrguer (mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <!-- Campo de busca -->
             <div class="search-box">
                 <input type="text" placeholder="O que você procura?">
                 <button aria-label="Buscar"><i class="fa fa-search"></i></button>
             </div>
             <div id="search-results"></div>
-          
+
         </div>
     </header>
 
@@ -61,28 +62,28 @@
                 <!-- Slide 1 -->
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img class="imgslide" src="./img/cilios1.jpeg" alt="Cílios">
+                    <img class="imgslide" src="./img/cilios1.jpeg" alt=" Estilo do Cílios">
                     <div class="text">Volume brasileiro</div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img class="imgslide" src="./img/sobrancelha2.jpeg" alt="Sobrancelha">
+                    <img class="imgslide" src="./img/sobrancelha2.jpeg" alt="Tecnica sobrancelha brow lamination">
                     <div class="text">Sobrancelha</div>
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img class="imgslide" src="./img/cilios3.jpeg" alt="Cílios">
+                    <img class="imgslide" src="./img/cilios3.jpeg" alt=" Estilos de Cílios">
                     <div class="text">Fox eyes</div>
                 </div>
 
                 <!-- Slide 4 -->
                 <div class="mySlides fade">
                     <div class="numbertext"></div>
-                    <img class="imgslide" src="./img/sobrancelha1.jpeg" alt="Sobrancelha">
+                    <img class="imgslide" src="./img/sobrancelha1.jpeg" alt=" Tecnica de renna na sobrancelha">
                     <div class="text">Sobrancelha</div>
                 </div>
             </div>
@@ -99,7 +100,7 @@
             <div class="vAideo-container">
                 <video controls autoplay muted loop>
                     <source src="img/studio.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos HTML5.
+                    Seu navegador não suporta vídeos.
                 </video>
             </div>
 
@@ -120,7 +121,7 @@
 
             <!-- Imagem destacada -->
             <figure class="image-highlight">
-                <img src="img/cantinho.jpeg" alt="Espaço Gabriely Rocha">
+                <img src="img/cantinho.png" alt="Cantinho do café do espaço da gabrielly rocha">
                 <figcaption>Espaço exclusivo Gabriely Rocha</figcaption>
             </figure>
 
@@ -141,7 +142,7 @@
                 </div>
                 <p class="agendar-horario">
                     <i class="fa-solid fa-calendar-check agendar-icone"></i>
-                    <a href="/pages/contatos.html" class="link-agendamento">Agende seu horário</a>
+                    <a href="./pages/contatos.html" class="link-agendamento">Agende seu horário</a>
                 </p>
 
                 <h4 class="siga-nos-titulo">Entre em contato:</h4>
@@ -169,32 +170,32 @@
 
             <div class="testimonials-row">
                 <div class="testimonial-card">
-                    <p>"Amei o atendimento! Minha sobrancelha ficou perfeita, super natural e sem dor! ❤️"</p>
-                    <h4>— Ana Clara</h4>
+                    <p>"Experiência ótima! Além de preços que condizem com a qualidade dos serviços, o atendimento e recepção são excelentes."</p>
+                    <h4>— Laura Batista</h4>
                     <div class="stars">★★★★★</div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p>"Ambiente lindo e aconchegante, me senti uma princesa! Voltarei sempre ✨"</p>
-                    <h4>— Mariana Silva</h4>
+                    <p>"Ótima, atendimento excelente, e profissional maravilhosa."</p>
+                    <h4>— Thami yumi nishimura </h4>
                     <div class="stars">★★★★★</div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p>"Melhor alongamento de cílios que já fiz na vida! Durabilidade incrível 😍"</p>
-                    <h4>— Beatriz Santos</h4>
+                    <p>"A Gabriely é uma excelente profissional, seu carisma com os clientes e carinho faz toda a diferença "</p>
+                    <h4>— Cristilene Queiroz Della Torre</h4>
                     <div class="stars">★★★★★</div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p>"Excelente profissional, super atenciosa e cuidadosa 💗"</p>
-                    <h4>— Júlia Ferreira</h4>
+                    <p>"Fiz o cílios uma vez com ela, gostei bastante."</p>
+                    <h4>— Larissa Della Torre</h4>
                     <div class="stars">★★★★★</div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p>"Resultado maravilhoso! Me senti super confiante depois da sessão 😍"</p>
-                    <h4>— Camila Andrade</h4>
+                    <p>"Gosto muito do trabalho da Gaby , ela é simpática, delicada e muito caprichosa ."</p>
+                    <h4>— Leticia Soares </h4>
                     <div class="stars">★★★★★</div>
                 </div>
             </div>
@@ -207,7 +208,16 @@
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
 
-
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 
     <script src="./js/script.js"></script>

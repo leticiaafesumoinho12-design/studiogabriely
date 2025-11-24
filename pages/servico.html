@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/servico-style.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -21,16 +21,20 @@
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servico.html" class="active">Serviços</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
-                    <li><a href="cursosv1.html">Cursos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./servico.html" class="ativo">Serviços</a></li>
+                    <li><a href="./contatos.html">Contato</a></li>
+                    <li><a href="./curso.html">Cursos</a></li>
                 </ul>
             </nav>
 
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+
             <div class="search-box">
                 <input type="text" placeholder="O que você procura?">
-                <button aria-label="Buscar"><i class="fa fa-search"></i></button>
+                <button><i class="fa fa-search"></i></button>
             </div>
 
             <div id="search-results"></div>
@@ -39,21 +43,20 @@
 
     <main>
 
-        <!-- Seção Cílios -->
         <section class="servico">
             <div class="servico-texto">
                 <h2>Cílios</h2>
-                <p>A extensão de cílios vai muito além da estética. Ela é um cuidado, um carinho com nós mesmas...</p>
+                <p>Realçar o olhar é também realçar quem somos. As extensões de cílios trazem leveza, charme e um toque
+                    especial.</p>
             </div>
 
             <div class="servico-imagens">
-                <img src="../img/Capturar.PNG" alt="Cílios 1">
-                <img src="../img/Capturar10.PNG" alt="Cílios 2">
+                <img src="../img/Capturar.PNG" alt="Modelo 1">
+                <img src="../img/Capturar10.PNG" alt="Modelo 2">
             </div>
         </section>
 
-        <!-- Seção Sobrancelhas -->
-        <section class="servico">
+        <section class="servico" id="sobrancelhas">
             <div class="servico-imagens">
                 <img src="../img/Capturar12.PNG" alt="Sobrancelha 1">
                 <img src="../img/Capturar2.PNG" alt="Sobrancelha 2">
@@ -61,11 +64,11 @@
 
             <div class="servico-texto">
                 <h2>Sobrancelhas</h2>
-                <p>As sobrancelhas moldam o olhar e expressam a nossa personalidade...</p>
+                <p>As sobrancelhas realçam o olhar e valorizam os traços naturais, transmitindo equilíbrio e
+                    personalidade.</p>
             </div>
         </section>
 
-        <!-- Tabela de Preços -->
         <section class="tabela-precos">
             <h2>Tabela de Preços</h2>
 
@@ -106,45 +109,31 @@
                     </tr>
                     <tr>
                         <td data-label="Serviço">Design Sobrancelhas</td>
-                        <td data-label="Descrição">Modelagem detalhada conforme o rosto.</td>
+                        <td data-label="Descrição">Modelagem conforme o rosto.</td>
                         <td data-label="Preço">R$ 80,00</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Serviço">Design + Henna</td>
-                        <td data-label="Descrição">Coloração e definição.</td>
-                        <td data-label="Preço">R$ 90,00</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Serviço">Brow Lamination</td>
-                        <td data-label="Descrição">Fios alinhados e volumosos.</td>
-                        <td data-label="Preço">R$ 120,00</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Serviço">Henna + Design Completo</td>
-                        <td data-label="Descrição">Tratamento completo para realçar o olhar.</td>
-                        <td data-label="Preço">R$ 130,00</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Dicas -->
         <section class="dicas">
-            <h2>Dicas Rápidas de Beleza 💕</h2>
-            <p class="dicas-intro">Cuidados simples que fazem diferença ✨</p>
+            <h2>Dicas Rápidas de Beleza</h2>
+            <p class="dicas-intro">Cuidados simples que fazem diferença</p>
 
             <div class="dicas-container">
                 <div class="dica-card">
-                    <h3>💧 Cuide das extensões</h3>
-                    <p>Use escovinha diariamente e evite molhar nas primeiras 24h.</p>
+                    <h3>Cuide das extensões</h3>
+                    <p>Use escovinha diariamente.</p>
                 </div>
+
                 <div class="dica-card">
-                    <h3>🕊️ Naturalidade</h3>
-                    <p>Evite rímel à prova d’água para maior durabilidade.</p>
+                    <h3>Naturalidade</h3>
+                    <p>Evite rímel à prova d’água.</p>
                 </div>
+
                 <div class="dica-card">
-                    <h3>🌸 Sobrancelhas</h3>
-                    <p>Hidrate e evite tirar fios em excesso.</p>
+                    <h3>Sobrancelhas</h3>
+                    <p>Hidrate e evite retirar fios em excesso.</p>
                 </div>
             </div>
         </section>
@@ -156,6 +145,7 @@
     </footer>
 
     <script src="../js/servico-script.js"></script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
-    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/sobre-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -18,16 +18,23 @@
         <div class="container">
             <img src="../img/logo.png" alt="Logo Gabriely Rocha" class="logo">
 
+
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="../pages/sobre.html" class="ativo">Sobre</a></li>
-                    <li><a href="../pages/servico.html">Serviços</a></li>
-                    <li><a href="../pages/contatos.html">Contato</a></li>
-                    <li><a href="../pages/cursosv1.html">Cursos</a></li>
+                    <li><a href="./sobre.html" class="ativo">Sobre</a></li>
+                    <li><a href="./servico.html">Serviços</a></li>
+                    <li><a href="./contatos.html">Contato</a></li>
+                    <li><a href="./curso.html">Cursos</a></li>
                 </ul>
             </nav>
 
+            <!-- Botão Hambúrguer (mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <!-- Campo de busca -->
             <div class="search-box">
                 <input type="text" placeholder="O que você procura?">
@@ -44,7 +51,7 @@
             <h2>Conheça Gabriely Rocha</h2>
 
             <div class="sobre-gaby">
-                <img src="../img/gabycilios.PNG" alt="Foto de Gabriely Rocha" class="foto">
+                <img src="../img/sobregaby.png" alt="Foto de Gabriely Rocha" class="foto">
                 <p>
                     Gabrielly Rocha é uma microempreendedora dedicada e apaixonada pela área da estética, especializada
                     em design de sobrancelhas e extensão de cílios, com mais<strong> de 6 anos de experiência.</strong>
@@ -74,17 +81,17 @@
             <div class="slideshow-container2">
 
                 <div class="mySlides2 fade">
-                    <img class="imgslide" src="../img/cantinho.jpeg" alt="cafe">
+                    <img class="imgslide" src="../img/cantinho.png" alt="cantinho do café">
 
                 </div>
 
                 <div class="mySlides2 fade">
-                    <img class="imgslide" src="../img/parede.jpeg" alt="logo">
+                    <img class="imgslide" src="../img/parede.png" alt="parede com sua logo">
 
                 </div>
 
                 <div class="mySlides2 fade">
-                    <img class="imgslide" src="../img/maca.jpeg" alt="maca">
+                    <img class="imgslide" src="../img/maca.png" alt="maca de atendimento">
 
                 </div>
 
@@ -111,93 +118,58 @@
                 </p>
             </div>
         </div>
-        <p class="frase">“Mais do que aparência, é a confiança que torna uma mulher bonita.”</p>
+        <p class="frase">“Apaixone-se por si...”</p>
 
         <!-- ===== SERVIÇOS ===== -->
         <section class="servicos">
-            <h2>Nossos Serviços</h2>
+            <h2 class="ser">Nossos Serviços</h2>
 
             <div class="cards-container" id="meuCard">
                 <div class="card">
                     <img src="../img/Capturar10.PNG" alt="Alongamento de cílios">
                     <p>Realce o seu olhar com alongamento de cílios que traz leveza e elegância.</p>
 
-                    <div class="escondido">
-                        desenvolvimentooooo
-                    </div>
 
-                    <button onclick="toggleCard()">Ver Mais</button>
-
+                    <a href="servico.html" class="link">Saiba mais</a>
 
                 </div>
-
                 <div class="card" id="meuCard">
                     <img src="../img/Capturar12.PNG" alt="Design de sobrancelhas">
                     <p>Design de sobrancelhas que valoriza sua beleza natural e harmoniza o rosto.</p>
 
-                    <div class="escondido">
-                        desenvolvimentooooo
-                    </div>
 
-                    <button onclick="toggleCard()">Ver Mais</button>
+
+                    <a href="servico.html#sobrancelhas" class="link">Saiba mais</a>
                 </div>
 
                 <div class="card" id="meuCard">
                     <img src="../img/curso.PNG" alt="Curso de design de sobrancelhas">
                     <p>Cursos com certificação para quem quer se destacar no mundo da beleza.</p>
-                    <div class="escondido">
-                        desenvolvimentooooo
-                    </div>
 
-                    <button onclick="toggleCard()">Ver Mais</button>
+                    <a href="curso.html" class="link">Saiba mais</a>
                 </div>
             </div>
         </section>
     </main>
-    <!-- Botão Flutuante do WhatsApp -->
-    <div id="modal" class="faq-content">
-        <p>Perguntas frequentes</p>
-
-        <p class="per">É normal os cílios naturais caírem?</p>
-        <p class="res">É normal cair, faz parte do processo de renovação dos pelos, e não existe um número exato
-            por dia. A cada 4 meses, em média, o pelo cai e nasce um outro no lugar. As extensões, colocadas de
-            forma correta, não influenciam em nada este ciclo. Elas cairão juntamente com os fios naturais.</p>
-        <br>
-
-        <p class="per">Pode usar máscara de cílios?</p>
-        <p class="res">Se forem à base de água, sim. Porém não há necessidade, pois as extensões de cílios
-            substituem completamente o uso da máscara, dando maior praticidade ao seu dia-a-dia.</p>
-        <br>
-
-        <p class="per">Qual a durabilidade da extensão de cílios?</p>
-        <p class="res">Não há uma regra, pois a durabilidade está diretamente ligada ao ciclo de crescimento dos
-            cílios naturais e dos cuidados recomendados para as extensões. Porém para manter os cílios sempre
-            impecáveis e bonitos sugerimos manutenções entre 15 e 20 dias após a primeira aplicação.</p>
-        <br>
-
-        <p class="per">Como cuidar do alongamento de cílios?</p>
-        <p class="res">Para manter suas extensões sempre bonitas é necessário seguir alguns cuidados como: lave
-            os olhos com shampoo de bebê pelo menos 3 vezes por semana, retire sempre todo o resíduo de
-            maquiagem, escove as extensões para mantê-las alinhadas, evite o uso de máscara de cílios ou
-            produtos à base de óleo e evite coçar os olhos. Seguindo essas regrinhas, com certeza sua extensão
-            durará por muito mais tempo.</p>
-        <br>
-
-        <p class="per">O que é henna? Quanto tempo dura?</p>
-        <p class="res">A henna é um corante natural extraído de uma planta transformado em pó, serve para
-            preencher falhas temporariamente, dura entre 3 e 15 dias</p>
-        <br>
-    </div>
-    <!-- Botão para abrir/fechar -->
-    <button onclick="toggleFAQ()" class="faq-float">
-        <img src="../img/faq.png" alt="Fale conosco" class="faq">
-    </button>
 
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="rodape">
         <p>© 2025 Gabriely Rocha - Todos os direitos reservados</p>
     </footer>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 
     <script src="../js/sobre-script.js"></script>
 </body>

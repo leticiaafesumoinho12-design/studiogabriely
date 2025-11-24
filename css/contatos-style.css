@@ -37,97 +37,128 @@
 .fale-conosco {
     text-align: center;
     margin-top: 40px;
+    color: #b25770;
 }
 
+.entra-em-contato {
 
+    color: #6d4b52;
+}
+
+.primeira-sessao {
+    text-align: center;
+    justify-content: center;
+}
+
+span{
+  font-weight: bold;
+}
 
 /* CARD PRINCIPAL */
-.experiencia-container {
-    background: #f7d4db;
-    padding: 25px;
-    border-radius: 18px;
-    max-width: 420px;
-    margin: 40px auto;
-    box-shadow: 0 4px 12px rgba(178, 83, 120, .15);
-    border: 1px solid rgba(178, 83, 120, .15);
-}
-
-/* TÍTULO */
-.experiencia-container h2 {
-    color: #a14463;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* TEXTOS */
-.experiencia-container p {
-    color: #6d4b52;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-/* BOXES INTERNOS */
-.info-box {
-    background: #fce8ec;
-    padding: 16px;
-    border-radius: 12px;
-    margin: 15px 0;
-    border: 1px solid rgba(178, 83, 120, 0.15);
-    display: flex;
-    gap: 12px;
+.extra-content {
+    margin-top: 50px;
+    background: #F3D6DA;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(178, 83, 120, .12);
+    border: 1px solid rgba(178, 83, 120, .08);
+    color: #4b2f3c;
+    width: 50%;
+    justify-content: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ÍCONES */
-.info-box i {
+.extra-content h3 {
+    font-size: 20px;
+    color: #9f4f78;
+    margin-bottom: 8px;
+}
+
+.siga-nos-titulo {
     font-size: 18px;
-    color: #a14463;
+    font-weight: 600;
+    margin: 18px 0 10px;
 }
 
-/* LINK AGENDAR */
-.agende-link {
-    margin-top: 8px;
-    display: inline-block;
-    font-weight: bold;
-    color: #a14463;
-    text-decoration: underline;
+/* CARDS DE INFO */
+.info-card {
+    display: flex;
+    gap: 10px;
+    background: #fae9f0;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #c97c9a;
+}
+
+.info-card i {
+    color: #a6527a;
+    font-size: 18px;
+}
+
+/* AGENDAMENTO */
+.agendar-horario {
+    margin: 10px 0 15px;
+}
+
+.link-agendamento {
+    color: #7c2d57;
+    font-weight: 600;
+}
+
+.link-agendamento:hover {
+    color: #c7518c;
 }
 
 /* ÍCONES REDES SOCIAIS */
-/* Instagram gradiente */
+.icones-redes {
+    display: flex;
+    gap: 14px;
+}
+
+.icone-link {
+    width: 46px;
+    height: 46px;
+    background: #ffe5ef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+    text-decoration-line: none;
+    box-shadow: 0 3px 7px rgba(178, 83, 120, .12);
+}
+
+.icone-link:hover {
+    transform: translateY(-6px) scale(1.12) rotate(-5deg);
+    background: #b8b6b7;
+
+}
+
+.icone-link i {
+    transition: .3s ease;
+}
+
+.icone-link:hover i {
+    transform: scale(1.2) rotate(8deg);
+    filter: brightness(1.25);
+}
+
+/* INSTAGRAM */
 .instagram i {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #ffb548 45%, #fc5e62 60%, #a745c3 90%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-size: 26px;
-    display: inline-block;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp i {
     color: #25D366;
     font-size: 28px;
-}
-
-
-/* Centraliza completamente o bloco */
-.primeira-sessao {
-    text-align: center;
-}
-
-/* Centraliza as opções */
-.opcoes-sessao {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
-}
-
-/* Esconde o rádio */
-.opcoes-sessao input[type="radio"] {
-    display: none;
 }
 
 /* ================================
@@ -178,9 +209,9 @@
 
 /* Estilo dos botões */
 .botao-sessao {
-    background: #fbe5f1;
+    background-color: #eebbce;
     color: #4a3c3c;
-    border: 3px solid #eec6d9;
+    border: 2px solid #ffffff;
     padding: 12px 30px;
     font-size: 15px;
     font-weight: 600;
@@ -188,25 +219,151 @@
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     transition: all 0.35s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.055);
     display: inline-block;
 }
 
 /* Hover */
 .botao-sessao:hover {
-    background: linear-gradient(to bottom, #f9e7f0, #ff9bc2);
-    border-color: #f5b5e1;
+    background-color: #fda7cf;
+    border-color: #f7ceea;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* Quando selecionado */
 .opcoes-sessao input[type="radio"]:checked+.botao-sessao {
-    background: linear-gradient(to bottom, #ffe4f1, #ff8bb7);
-    border-color: #f89dcf;
+    background-color: #fda7cf;
+    border-color: #fdc2e2;
     color: #4e2f3e;
     transform: translateY(-4px) scale(1.08);
     box-shadow: 0 9px 20px rgba(0, 0, 0, 0.35);
+}
+
+/*FAQ MODAL*/
+
+/* Estado inicial - escondido */
+.faq-content {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    z-index: 9998;
+    padding: 0;
+}
+
+/* Quando aparecer */
+.faq-content.fac-show {
+    width: 350px;
+    height: auto;
+    max-height: 80vh;
+    opacity: 1;
+    padding: 25px;
+    overflow-y: auto;
+    animation: slideInFromRight 0.4s ease-out;
+}
+
+/* Animação de entrada */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Título */
+.faq-content>p:first-child {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #cd316f;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #cd316f;
+}
+
+/* Perguntas */
+.faq-content .per {
+    font-weight: 600;
+    color: #cd316f;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Respostas */
+.faq-content .res {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Botão flutuante FAQ */
+.faq-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.faq-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(211, 37, 124, 0.6);
+}
+
+.faq-float img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Esconde o botão quando o modal está aberto */
+.faq-content.fac-show~.faq-float {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Scrollbar personalizada */
+.faq-content.fac-show::-webkit-scrollbar {
+    width: 8px;
+}
+
+.faq-content.fac-show::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.faq-content.fac-show::-webkit-scrollbar-thumb {
+    background: #cd316f;
+    border-radius: 10px;
+}
+
+.faq-content.fac-show::-webkit-scrollbar-thumb:hover {
+    background: #ff6fa8;
 }
 
 
@@ -228,6 +385,7 @@
 
     .extra-content {
         padding: 22px;
+        width: 90%;
         text-align: center;
     }
 

@@ -110,7 +110,6 @@ main {
 
 /* TIPOGRAFIA */
 h2 {
-    font-family: "Playfair Display", serif;
     font-size: 28px;
     font-weight: 600;
     color: #b25770;
@@ -193,13 +192,14 @@ p {
     align-items: center;
     justify-content: center;
     transition: .3s ease;
+    text-decoration-line: none;
     box-shadow: 0 3px 7px rgba(178, 83, 120, .12);
 }
 
 .icone-link:hover {
     transform: translateY(-6px) scale(1.12) rotate(-5deg);
     background: #b8b6b7;
-    box-shadow: 0 6px 14px rgba(178, 83, 120, .22);
+
 }
 
 .icone-link i {

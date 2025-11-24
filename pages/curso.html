@@ -17,17 +17,24 @@
         <div class="container">
             <img src="../img/logo.png" alt="Logo Gabriella Rocha" class="logo">
 
+
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servico.html">Serviços</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
-                    <li><a href="cursosv1.html">Cursos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./servico.html">Serviços</a></li>
+                    <li><a href="./contatos.html">Contato</a></li>
+                    <li><a href="./curso.html" class="ativo">Cursos</a></li>
                 </ul>
             </nav>
 
-           <!-- Campo de busca -->
+            <!-- Botão Hambúrguer (mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Campo de busca -->
             <div class="search-box">
                 <input type="text" placeholder="O que você procura?">
                 <button aria-label="Buscar"><i class="fa fa-search"></i></button>
@@ -43,9 +50,10 @@
             <div class="texto-intro">
                 <h2>Sobre os Cursos</h2>
                 <p>
-                  Aprenda as técnicas mais procuradas do mundo da beleza e transforme seu talento em profissão!
-                  Domine o design de sobrancelhas, alongamento e lifting de cílios com aulas práticas e suporte completo.
-                  Conquiste sua independência financeira fazendo o que ama e encante suas clientes todos os dias!
+                    Aprenda as técnicas mais procuradas do mundo da beleza e transforme seu talento em profissão!
+                    Domine o design de sobrancelhas, alongamento e lifting de cílios com aulas práticas e suporte
+                    completo.
+                    Conquiste sua independência financeira fazendo o que ama e encante suas clientes todos os dias!
                 </p>
             </div>
             <img src="../img/Capturar.PNG" alt="Gaby com certificado" class="img-intro">
@@ -60,8 +68,8 @@
                 <div class="curso-info">
                     <h3>Curso de Design de Sobrancelhas</h3>
                     <p>
-                             Domine as técnicas de medição, mapeamento e correção com pinça, linha e Henna.
-                             Inclui certificado profissional e suporte pós-curso.
+                        Domine as técnicas de medição, mapeamento e correção com pinça, linha e Henna.
+                        Inclui certificado profissional e suporte pós-curso.
                     </p>
                     <span class="valor">R$ 1499,00 a vista ou 10x de R$ 180,00 no cartão de credito</span>
                     <a href="contatos.html" class="btn-inscrever">Quero me inscrever</a>
@@ -73,8 +81,8 @@
                 <div class="curso-info">
                     <h3>Curso de Extensão de Cílios</h3>
                     <p>
-                          Aprenda as técnicas clássica, híbrida e volume russo com aulas práticas 
-                          e certificação inclusa Ideal para quem deseja iniciar na área ou se aperfeiçoar.
+                        Aprenda as técnicas clássica, híbrida e volume russo com aulas práticas
+                        e certificação inclusa Ideal para quem deseja iniciar na área ou se aperfeiçoar.
                     </p>
                     <span class="valor">R$ 1599,00 a vista ou 10x de R$ 192,00 no cartão de credito</span>
                     <a href="contatos.html" class="btn-inscrever">Quero me inscrever</a>
@@ -85,12 +93,26 @@
         </section>
     </main>
 
-    
+
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="footer">
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
 
     <script src="../js/cursos-script.js"></script>
 </body>

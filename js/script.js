@@ -73,13 +73,13 @@ document.querySelector('.slideshow-container').addEventListener('mouseleave', ()
 // ITENS DA BUSCA (coloque seus links reais aqui)
 // =====================================
 const itens = [
-    { nome: "Experiência Premium", icone: "fa-star", link: "index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "/pages/servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "/pages/contatos.html" },
+    { nome: "inicio", icone: "fa-star", link: "index.html" },
+    { nome: "Serviços", icone: "fa-briefcase", link: "./pages/servico.html" },
+    { nome: "Contato", icone: "fa-envelope", link: "./pages/contatos.html" },
     { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
     { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre Mim", icone: "fa-user", link: "/pages/sobre.html" },
-    { nome: "cursos", icone: "fa-user", link: "/pages/cursosv1.html" },
+    { nome: "Sobre ", icone: "fa-user", link: "./pages/sobre.html" },
+    { nome: "cursos", icone: "fa-user", link: "./pages/curso.html" },
 
 ];
 
@@ -144,3 +144,70 @@ document.querySelector(".search-box input").addEventListener("keydown", (e) => {
 });
 
 
+// ================================
+// 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
+// ================================
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar ul');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active'); // animação do X
+    navMenu.classList.toggle('active');   // abre o menu
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+
+// ================================
+// 🌸 SISTEMA DE BUSCA
+// ================================
+const searchInput = document.querySelector('.search-box input');
+const searchResults = document.getElementById('search-results');
+
+const items = [
+    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-eye" },
+    { nome: "Design", link: "./pages/servico.html", icon: "fa-star" },
+    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-book" },
+    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-calendar" },
+    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-user" }
+];
+
+// Mostrar os resultados
+searchInput.addEventListener('input', () => {
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    if (searchText === "") {
+        searchResults.style.display = "none";
+        return;
+    }
+
+    const resultadosFiltrados = items.filter(item =>
+        item.nome.toLowerCase().includes(searchText)
+    );
+
+    if (resultadosFiltrados.length === 0) {
+        searchResults.innerHTML = `<p style="padding:10px;">Nenhum resultado encontrado...</p>`;
+    } else {
+        searchResults.innerHTML = resultadosFiltrados.map(item => `
+            <div class="item" onclick="window.location.href='${item.link}'">
+                <i class="fa ${item.icon}"></i>
+                <span>${item.nome}</span>
+            </div>
+        `).join('');
+    }
+
+    searchResults.style.display = "block";
+});
+
+// Ocultar resultados ao clicar fora
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-box")) {
+        searchResults.style.display = "none";
+    }
+});

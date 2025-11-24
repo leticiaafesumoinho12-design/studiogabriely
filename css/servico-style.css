@@ -37,9 +37,9 @@ main {
 
 .servico-texto h2 {
     font-size: 2.2em;
-    color: #000;
+    color: #b25770;
     margin-bottom: 15px;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 1px;
 }
 
@@ -77,7 +77,7 @@ main {
     border-radius: 25px;
     padding: 40px 50px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    text-align: center;
+    text-align: left;
     margin-bottom: 70px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -88,25 +88,19 @@ main {
 }
 
 .tabela-precos h2 {
+    text-align: center;
+    width: 100%;
     font-size: 2.2em;
-    color: #000;
+    color: #b25770;
     margin-bottom: 35px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 3px solid #f2cde0;
     display: inline-block;
-    padding-bottom: 8px;
 }
 
-/* ===== ESTILO DA TABELA PADRÃO (DESKTOP/TABLET) ===== */
-.tabela-precos table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    font-size: 1.05em;
-}
-
+/* Alinhamento cabeçalho centralizado */
 .tabela-precos th {
     background-color: #f8d8e7;
     color: #000;
@@ -116,8 +110,10 @@ main {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
+/* Alinhamento do conteúdo à esquerda, exceto preço */
 .tabela-precos td {
     background-color: #fff8fb;
     color: #444;
@@ -126,6 +122,34 @@ main {
     border-left: 1px solid #fbe5f0;
     border-right: 1px solid #fbe5f0;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: left !important;
+}
+
+/* Ajuste colunas largura fixa para melhor alinhamento */
+.tabela-precos table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    font-size: 1.05em;
+    table-layout: fixed;
+}
+
+/* Larguras proporcionais para colunas */
+.tabela-precos th:nth-child(1),
+.tabela-precos td:nth-child(1) {
+    width: 30%;
+}
+
+.tabela-precos th:nth-child(2),
+.tabela-precos td:nth-child(2) {
+    width: 50%;
+}
+
+.tabela-precos th:nth-child(3),
+.tabela-precos td:nth-child(3) {
+    width: 20%;
+    text-align: right !important;
+    /* preço alinhado à direita */
 }
 
 .tabela-precos tr:hover td {
@@ -145,7 +169,7 @@ main {
 
 .dicas h2 {
     font-size: 2rem;
-    color: #000;
+    color: #b25770;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -183,6 +207,7 @@ main {
 
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
+
     /* Ajuste para quebra em coluna, mas com imagens lado a lado ainda */
     .servico {
         flex-direction: column;
@@ -201,6 +226,7 @@ main {
 
 /* Celulares grandes (até 768px) */
 @media (max-width: 768px) {
+
     /* Força as imagens para coluna em telas menores */
     .servico-imagens {
         flex-direction: column;
@@ -218,7 +244,7 @@ main {
     .servico-texto p {
         font-size: 1em;
     }
-    
+
     /* Faz os cards de dicas ficarem em coluna */
     .dicas-container {
         grid-template-columns: 1fr;
@@ -239,7 +265,7 @@ main {
 
 /* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-    
+
     /* --- Responsividade da Tabela: Transforma em Cartão --- */
 
     .tabela-precos {
@@ -247,16 +273,18 @@ main {
     }
 
     .tabela-precos thead {
-        display: none; /* Esconde o cabeçalho original */
+        display: none;
+        /* Esconde o cabeçalho original */
     }
 
     .tabela-precos table {
         border-spacing: 0;
         display: block;
     }
-    
+
     .tabela-precos tr {
-        display: block; /* Linha vira um bloco (cartão) */
+        display: block;
+        /* Linha vira um bloco (cartão) */
         margin-bottom: 20px;
         border: 1px solid #f4cfe0;
         border-radius: 10px;
@@ -265,12 +293,14 @@ main {
     }
 
     .tabela-precos td {
-        display: block; /* Célula vira um bloco de informação */
+        display: block;
+        /* Célula vira um bloco de informação */
         text-align: right;
         padding: 10px 15px;
         border: none;
         position: relative;
-        padding-left: 50%; /* Espaço para o rótulo */
+        padding-left: 50%;
+        /* Espaço para o rótulo */
         font-size: 1em;
     }
 
@@ -288,7 +318,7 @@ main {
         font-size: 0.9em;
         text-align: left;
     }
-    
+
     /* Destaque para o nome do Serviço (primeiro TD) */
     .tabela-precos tr td:first-child {
         font-size: 1.1em;
@@ -297,15 +327,16 @@ main {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         color: #000;
-        text-align: center; /* Centraliza o nome do serviço */
+        text-align: center;
+        /* Centraliza o nome do serviço */
         padding-left: 15px;
     }
-    
+
     /* Remove o rótulo do nome do serviço */
     .tabela-precos tr td:first-child:before {
-        content: ""; 
+        content: "";
     }
-    
+
     /* Destaque para o Preço (último TD) */
     .tabela-precos tr td:last-child {
         background-color: #f8d8e7;
@@ -313,12 +344,12 @@ main {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    
+
     .tabela-precos tr:hover td {
         background-color: #fff8fb;
         transform: none;
     }
-    
+
     /* Outros ajustes de mobile */
     .servico-imagens img {
         max-width: 100% !important;
