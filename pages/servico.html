@@ -5,73 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Gabriely Rocha</title>
-    <link rel="stylesheet" href="../css/servico-style.css">
-    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/nav.css">
 
-    <!-- 🔍 Ícones (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/servico-style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- ===== CABEÇALHO ===== -->
+
     <header class="header">
         <div class="container">
-            <img src="../img/logo.png" alt="Logo Gabriella Rocha" class="logo">
-
-            <!-- Botão menu hamburguer -->
-            <button class="menu-toggle"><i class="fa fa-bars"></i></button>
+            <img src="../img/logo.png" alt="Logo Gabrielly Rocha" class="logo">
 
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servico.html">Serviços</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
-                    <li><a href="cursosv1.html">Cursos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./servico.html" class="ativo">Serviços</a></li>
+                    <li><a href="./contatos.html">Contato</a></li>
+                    <li><a href="./curso.html">Cursos</a></li>
                 </ul>
             </nav>
 
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar..." />
-                <button type="submit"><i class="fa fa-search"></i></button>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
             </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="O que você procura?">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+
+            <div id="search-results"></div>
         </div>
     </header>
 
-    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
     <main>
+
         <section class="servico">
             <div class="servico-texto">
                 <h2>Cílios</h2>
-                <p>
-                    A extensão de cílios vai muito além da estética. Ela é um cuidado, um carinho com nós mesmas...
-                    é sobre acordar, se olhar no espelho e se sentir mais bonita, mais confiante, mais você.
-                </p>
+                <p>Realçar o olhar é também realçar quem somos. As extensões de cílios trazem leveza, charme e um toque
+                    especial.</p>
             </div>
+
             <div class="servico-imagens">
-                <img src="../img/Capturar.PNG" alt="Cílios 1">
-                <img src="../img/Capturar10.PNG" alt="Cílios 2">
+                <img src="../img/Capturar.PNG" alt="Modelo 1">
+                <img src="../img/Capturar10.PNG" alt="Modelo 2">
             </div>
         </section>
 
-        <section class="servico">
+        <section class="servico" id="sobrancelhas">
             <div class="servico-imagens">
                 <img src="../img/Capturar12.PNG" alt="Sobrancelha 1">
                 <img src="../img/Capturar2.PNG" alt="Sobrancelha 2">
             </div>
+
             <div class="servico-texto">
                 <h2>Sobrancelhas</h2>
-                <p>
-                    As sobrancelhas moldam o olhar, equilibram o rosto e expressam a nossa personalidade,
-                    mas o poder delas vai muito além da estética.
-                </p>
+                <p>As sobrancelhas realçam o olhar e valorizam os traços naturais, transmitindo equilíbrio e
+                    personalidade.</p>
             </div>
         </section>
 
-        <!-- ===== TABELA DE PREÇOS ===== -->
         <section class="tabela-precos">
             <h2>Tabela de Preços</h2>
+
             <table>
                 <thead>
                     <tr>
@@ -80,73 +80,72 @@
                         <th>Preço</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- CÍLIOS -->
-                    <tr>
-                        <td>Extensão de Cílios Clássica</td>
-                        <td>Fios delicados que proporcionam um olhar natural e elegante.</td>
-                        <td>R$ 120,00</td>
-                    </tr>
-                    <tr>
-                        <td>Extensão de Cílios Volume Russo</td>
-                        <td>Fios mais volumosos e intensos para um olhar marcante.</td>
-                        <td>R$ 150,00</td>
-                    </tr>
-                    <tr>
-                        <td>Extensão de Cílios Híbrido</td>
-                        <td>Combinação entre o clássico e o volume russo para um efeito equilibrado.</td>
-                        <td>R$ 140,00</td>
-                    </tr>
-                    <tr>
-                        <td>Extensão de Cílios Mega Volume</td>
-                        <td>Ideal para quem busca cílios cheios, definidos e com efeito glamouroso.</td>
-                        <td>R$ 180,00</td>
-                    </tr>
-                    <tr>
-                        <td>Manutenção de Cílios</td>
-                        <td>Reaplicação de fios para manter o visual perfeito e duradouro.</td>
-                        <td>R$ 80,00</td>
-                    </tr>
 
-                    <!-- SOBRANCELHAS -->
+                <tbody>
                     <tr>
-                        <td>Design de Sobrancelhas</td>
-                        <td>Modelagem personalizada que valoriza o formato natural do rosto.</td>
-                        <td>R$ 80,00</td>
+                        <td data-label="Serviço">Extensão Clássica</td>
+                        <td data-label="Descrição">Olhar natural e delicado.</td>
+                        <td data-label="Preço">R$ 120,00</td>
                     </tr>
                     <tr>
-                        <td>Design com Henna</td>
-                        <td>Coloração temporária que define e realça as sobrancelhas.</td>
-                        <td>R$ 90,00</td>
+                        <td data-label="Serviço">Volume Russo</td>
+                        <td data-label="Descrição">Olhar marcante e volumoso.</td>
+                        <td data-label="Preço">R$ 150,00</td>
                     </tr>
                     <tr>
-                        <td>Brow Lamination</td>
-                        <td>Técnica para alinhar e fixar os fios, dando um efeito mais cheio e definido.</td>
-                        <td>R$ 120,00</td>
+                        <td data-label="Serviço">Híbrido</td>
+                        <td data-label="Descrição">Combinação equilibrada entre clássico e volume.</td>
+                        <td data-label="Preço">R$ 140,00</td>
                     </tr>
                     <tr>
-                        <td>Henna + Design Completo</td>
-                        <td>Tratamento completo para realçar o olhar com formato e coloração ideais.</td>
-                        <td>R$ 130,00</td>
+                        <td data-label="Serviço">Mega Volume</td>
+                        <td data-label="Descrição">Fios densos e glamourosos.</td>
+                        <td data-label="Preço">R$ 180,00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Serviço">Manutenção</td>
+                        <td data-label="Descrição">Reaplicação para manter o visual.</td>
+                        <td data-label="Preço">R$ 80,00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Serviço">Design Sobrancelhas</td>
+                        <td data-label="Descrição">Modelagem conforme o rosto.</td>
+                        <td data-label="Preço">R$ 80,00</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
+        <section class="dicas">
+            <h2>Dicas Rápidas de Beleza</h2>
+            <p class="dicas-intro">Cuidados simples que fazem diferença</p>
+
+            <div class="dicas-container">
+                <div class="dica-card">
+                    <h3>Cuide das extensões</h3>
+                    <p>Use escovinha diariamente.</p>
+                </div>
+
+                <div class="dica-card">
+                    <h3>Naturalidade</h3>
+                    <p>Evite rímel à prova d’água.</p>
+                </div>
+
+                <div class="dica-card">
+                    <h3>Sobrancelhas</h3>
+                    <p>Hidrate e evite retirar fios em excesso.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- ===== RODAPÉ ===== -->
     <footer class="footer">
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- ===== SCRIPT DO MENU RESPONSIVO ===== -->
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const navbar = document.querySelector('.navbar');
-        toggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-    </script>
+    <script src="../js/servico-script.js"></script>
+
 </body>
 
 </html>

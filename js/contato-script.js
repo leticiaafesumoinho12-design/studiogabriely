@@ -1,85 +1,14 @@
-// =================== SEU CÓDIGO ORIGINAL ===================
-
-// Índice do slide atual
-let slideIndex = 1;
-
-// Variável para controlar o timer automático
-let autoSlideTimer;
-
-// Inicializa o carrossel
-showSlides(slideIndex);
-startAutoSlide();
-
-// Função para avançar/voltar slides manualmente
-function plusSlides(n) {
-    stopAutoSlide();
-    showSlides(slideIndex += n);
-    startAutoSlide();
-}
-
-// Função para ir para um slide específico (dots)
-function currentSlide(n) {
-    stopAutoSlide();
-    showSlides(slideIndex = n);
-    startAutoSlide();
-}
-
-// Função principal que exibe os slides
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-// Função para iniciar o carrossel automático
-function startAutoSlide() {
-    autoSlideTimer = setInterval(() => {
-        slideIndex++;
-        showSlides(slideIndex);
-    }, 4000);
-}
-
-// Função para parar o carrossel automático
-function stopAutoSlide() {
-    clearInterval(autoSlideTimer);
-}
-
-// Pausa o carrossel quando o mouse está sobre ele
-document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
-    stopAutoSlide();
-});
-
-// Retoma o carrossel quando o mouse sai
-document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
-    startAutoSlide();
-});
-
-
 /// =====================================
 // ITENS DA BUSCA (coloque seus links reais aqui)
 // =====================================
 const itens = [
-    { nome: "inicio", icone: "fa-star", link: "index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "./pages/servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "./pages/contatos.html" },
+    { nome: "inicio", icone: "fa-star", link: "../index.html" },
+    { nome: "Serviços", icone: "fa-briefcase", link: "./servico.html" },
+    { nome: "Contato", icone: "fa-envelope", link: "./contatos.html" },
     { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
     { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre ", icone: "fa-user", link: "./pages/sobre.html" },
-    { nome: "cursos", icone: "fa-user", link: "./pages/curso.html" },
+    { nome: "Sobre", icone: "fa-user", link: "./sobre.html" },
+    { nome: "cursos", icone: "fa-user", link: "./curso.html" },
 
 ];
 
@@ -134,7 +63,14 @@ function buscar() {
         resultsBox.style.display = "block";
     }
 }
-
+// ===== FAQ MODAL =====
+function toggleFAQ() {
+    const modal = document.getElementById("modal");
+    
+    if (modal) {
+        modal.classList.toggle("fac-show");
+    }
+}
 // Botão
 document.querySelector(".search-box button").addEventListener("click", buscar);
 
@@ -142,8 +78,30 @@ document.querySelector(".search-box button").addEventListener("click", buscar);
 document.querySelector(".search-box input").addEventListener("keydown", (e) => {
     if (e.key === "Enter") buscar();
 });
+// Fechar ao clicar fora do modal
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById("modal");
+    const button = document.querySelector(".faq-float");
+    
+    // Verifica se o clique foi fora do modal e do botão
+    if (modal && button) {
+        const isClickInsideModal = modal.contains(event.target);
+        const isClickOnButton = button.contains(event.target);
+        
+        if (!isClickInsideModal && !isClickOnButton && modal.classList.contains("fac-show")) {
+            modal.classList.remove("fac-show");
+        }
+    }
+});
 
-
+// Fechar com a tecla ESC
+document.addEventListener('keydown', function(event) {
+    const modal = document.getElementById("modal");
+    
+    if (event.key === "Escape" && modal && modal.classList.contains("fac-show")) {
+        modal.classList.remove("fac-show");
+    }
+});
 // ================================
 // 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
 // ================================

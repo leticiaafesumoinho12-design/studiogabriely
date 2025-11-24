@@ -1,224 +1,360 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== SOBRE ===== */
+.sobre {
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.menu-principal {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    list-style: none;
-
-
+.sobre h2 {
+    margin-bottom: 40px;
+    color: #b25770;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fae9f0;
-    color: #3d2d34;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-
-.header {
-    background-color: #e9b9cb;
-    padding: 1rem 0;
-    display: flex;
-    border-radius: 10px;
-}
-
-.imagem-logo {
-    height: 80px;
-    align-content: center;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    height: 80px;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #b87ba1;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-
-
-}
-
-.search-box input {
-    border: none;
-    border-radius: 20px;
-    padding: 0.4rem 1rem;
-    outline: none;
-}
-
-.search-box button {
-    background: transparent;
-    border: none;
-}
-
-.imagem-botao {
-    width: 50px;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.search-container input {
-    border: none;
-    outline: none;
-    padding: 6px 10px;
-    font-size: 0.95em;
-    border-radius: 20px;
-    width: 120px;
-    background: transparent;
-    transition: width 0.3s ease;
-}
-
-.search-container input:focus {
-    width: 180px;
-}
-
-.search-container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #555;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.search-container button:hover {
-    color: #f58bb3;
-    transform: scale(1.1);
-}
-.foto{
-    border-radius: 20px;
-}
-
-.sobre h2{
-    padding-top: 30px;
-    padding-left: 550px;
-}
 
 .sobre-gaby {
-    width: 100%;
-    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
-.foto-gaby{
-    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: justify;
 }
 
+strong {
+    color: #cd316f;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+.sobre-gaby .foto {
+    width: 500px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.ambiente {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 50px;
+    color: #b25770;
+}
+
+.local {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-right: 150px;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+/* ===== FRASE ===== */
 .frase {
     font-family: "Great Vibes", cursive;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin-top: 40px;
-    color: #333;
-    font-size: 30px;
-    white-space: nowrap;  
+    color: #4a2c3b;
+    margin: 50px auto;
+    max-width: 600px;
+    white-space: nowrap;
 }
+.ser{
+    color: #b25770;
+}
+/* ===== SERVIÇOS ===== */
 .servicos {
-    margin-top: 40px;
+    text-align: center;
+    padding: 40px 20px 60px;
 }
 
-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    max-width: 1200px;
+.servicos h2 {
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Seção das duas fotos */
-.top-section {
-    padding: 30pxpx;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-    margin-top: 20px;
-}
-
 .card {
-    width: 100%;
-    height: auto;
     background-color: #fff;
-    flex: 1 1 45%;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: auto;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.card img,
-.card .foto-placeholder {
-    width: 50%;
-    height: 50%;
-    background-color: #dcdcdc;
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.expandido {
+    width: auto;
+    height: 500px;
+}
+
+/* conteúdo escondido */
+.escondido {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* quando aparecer */
+.card.expandido .escondido {
+    max-height: 500px;
+    /* altura grande para abrir */
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    font-weight: 500;
 }
 
 .card p {
-    padding: 10px;
+    margin: 15px 0;
 }
 
-.card a {
-    color: #f63ba8;
-    font-weight: 600;
+.link{
+    background-color: #ff6fa8;
+    /* cor rosa suave */
+    color: #fff;
     text-decoration: none;
+    /* texto branco */
+    padding: 6px 12px;
+    /* tamanho do botão */
+    border: none;
+    /* sem borda */
+    border-radius: 8px;
+    /* cantos arredondados */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    /* animação suave */
 }
 
-.card a:hover {
-    text-decoration: underline;
+.link:hover {
+    background-color: #ff4e93;
+    /* cor mais forte no hover */
+    transform: scale(1.05);
+    /* aumenta levemente */
+
 }
+
+
+
+/* ======== CONFIGURAÇÃO GERAL DO SEGUNDO CARROSSEL ======== */
+.slideshow-container2 {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    /* limite de largura */
+    height: 400px;
+    /* altura fixa para padronizar as imagens */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
+
+/* Cada slide individual */
+.mySlides2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: fade 1.2s ease-in-out;
+}
+
+/* Imagens dentro do carrossel */
+.mySlides2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* mantém proporção e preenche o espaço */
+    border-radius: 15px;
+}
+
+
+/* Texto sobre a imagem */
+.text {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* ======== BOTÕES DE NAVEGAÇÃO ======== */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .faq-content.fac-show {
+        width: calc(100vw - 40px);
+        max-width: 350px;
+        right: 20px;
+    }
+}
+
 /* ===== RODAPÉ ===== */
 .rodape {
     background-color: #f8cddd;
     color: #6b3f52;
     text-align: center;
     padding: 15px;
-    margin-top: 50px;
     font-size: 14px;
+    border-top: 1px;
+}
+/* ===================== */
+/*  RESPONSIVIDADE GERAL */
+/* ===================== */
+
+/* ============================= */
+
+@media (max-width: 1100px) {
+    .sobre-gaby {
+        display: flex;
+        flex-direction: column; /* imagem em cima */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .sobre-gaby .foto {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .sobre-gaby p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    /* ----------- Ambiente ----------- */
+
+    .local {
+        display: flex;
+        flex-direction: column; /* imagem em cima */
+        padding: 8px;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .slideshow-container2 {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .texto p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
+
+
+
+/* ===================== */
+/*   TELAS MENORES       */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    .sobre h2,
+    .ambiente,
+    .ser {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .frase {
+        font-size: 2rem;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .faq-float {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* ===================== */
+/*   TELAS MUITO PEQUENAS */
+/* ===================== */
+
+@media (max-width: 480px) {
+    .sobre-gaby p,
+    .texto p {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
 }

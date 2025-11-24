@@ -1,94 +1,21 @@
-// =================== SEU CÓDIGO ORIGINAL ===================
-
-// Índice do slide atual
-let slideIndex = 1;
-
-// Variável para controlar o timer automático
-let autoSlideTimer;
-
-// Inicializa o carrossel
-showSlides(slideIndex);
-startAutoSlide();
-
-// Função para avançar/voltar slides manualmente
-function plusSlides(n) {
-    stopAutoSlide();
-    showSlides(slideIndex += n);
-    startAutoSlide();
-}
-
-// Função para ir para um slide específico (dots)
-function currentSlide(n) {
-    stopAutoSlide();
-    showSlides(slideIndex = n);
-    startAutoSlide();
-}
-
-// Função principal que exibe os slides
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-// Função para iniciar o carrossel automático
-function startAutoSlide() {
-    autoSlideTimer = setInterval(() => {
-        slideIndex++;
-        showSlides(slideIndex);
-    }, 4000);
-}
-
-// Função para parar o carrossel automático
-function stopAutoSlide() {
-    clearInterval(autoSlideTimer);
-}
-
-// Pausa o carrossel quando o mouse está sobre ele
-document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
-    stopAutoSlide();
-});
-
-// Retoma o carrossel quando o mouse sai
-document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
-    startAutoSlide();
-});
-
-
-/// =====================================
-// ITENS DA BUSCA (coloque seus links reais aqui)
-// =====================================
 const itens = [
-    { nome: "inicio", icone: "fa-star", link: "index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "./pages/servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "./pages/contatos.html" },
+    { nome: "inicio", icone: "fa-star", link: "../index.html" },
+    { nome: "Serviços", icone: "fa-briefcase", link: "./servico.html" },
+    { nome: "Contato", icone: "fa-envelope", link: "./contatos.html" },
     { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
     { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre ", icone: "fa-user", link: "./pages/sobre.html" },
-    { nome: "cursos", icone: "fa-user", link: "./pages/curso.html" },
-
+    { nome: "Sobre ", icone: "fa-user", link: "./sobre.html" },
+    { nome: "Cursos", icone: "fa-graduation-cap", link: "./curso.html" },
 ];
 
-// Criar caixa de resultados
 let resultsBox = document.getElementById("search-results");
+let input = document.querySelector(".search-box input");
+let button = document.querySelector(".search-box button");
 
 function similaridade(a, b) {
     a = a.toLowerCase();
     b = b.toLowerCase();
+
     let pontos = 0;
     for (let i = 0; i < Math.min(a.length, b.length); i++) {
         if (a[i] === b[i]) pontos++;
@@ -96,9 +23,8 @@ function similaridade(a, b) {
     return pontos / b.length;
 }
 
-// Função da busca
 function buscar() {
-    const texto = document.querySelector(".search-box input").value.trim().toLowerCase();
+    const texto = input.value.trim().toLowerCase();
     resultsBox.innerHTML = "";
 
     if (texto === "") {
@@ -129,21 +55,39 @@ function buscar() {
         });
 
         resultsBox.style.display = "block";
+
+        if (window.innerWidth < 600) {
+            resultsBox.scrollIntoView({ behavior: "smooth" });
+        }
+
     } else {
         resultsBox.innerHTML = "<p style='opacity:0.6;'>Nenhum resultado encontrado...</p>";
         resultsBox.style.display = "block";
     }
 }
 
-// Botão
-document.querySelector(".search-box button").addEventListener("click", buscar);
+button.addEventListener("click", buscar);
+input.addEventListener("keydown", (e) => { if (e.key === "Enter") buscar(); });
 
-// Enter
-document.querySelector(".search-box input").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") buscar();
+let delay;
+input.addEventListener("input", () => {
+    clearTimeout(delay);
+    delay = setTimeout(buscar, 250);
 });
 
+document.addEventListener("click", (e) => {
+    if (!document.querySelector(".search-box").contains(e.target)) {
+        resultsBox.style.display = "none";
+    }
+});
 
+input.addEventListener("focus", () => {
+    if (window.innerWidth < 600) {
+        setTimeout(() => {
+            input.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 300);
+    }
+});
 // ================================
 // 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
 // ================================

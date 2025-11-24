@@ -1,4 +1,6 @@
-/* ===== ESTILOS GERAIS ===== */
+/* ================================
+   🌸 ESTILOS GERAIS
+================================ */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #fdf6f8;
@@ -7,92 +9,371 @@ body {
     padding: 0;
 }
 
-/* ===== CABEÇALHO ===== */
+* {
+    box-sizing: border-box;
+}
+
+/* ================================
+   🌸 CABEÇALHO
+================================ */
 header {
     background-color: #eec6d9;
     padding: 1rem 0;
-    
+    width: 100%;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 92%;
+    max-width: 1300px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo {
     height: 80px;
 }
 
-/* ===== MENU ===== */
+.ativo {
+    color: #b87ba1 !important;
+    text-decoration: underline !important;
+}
+
+/* ================================
+   🌸 MENU (DESKTOP)
+================================ */
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1.8rem;
     padding: 0;
     margin: 0;
 }
 
 .navbar a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .navbar a:hover {
     color: #b87ba1;
 }
 
-/* ===== CAMPO DE PESQUISA ===== */
+/* ================================
+   🌸 BOTÃO HAMBÚRGUER
+================================ */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: #a6527a;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* animação X */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================================
+   🌸 BARRA DE BUSCA
+================================ */
 .search-box {
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background: #fff;
     border-radius: 25px;
     padding: 6px 12px;
-    width: 220px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.search-box:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    min-width: 200px;
 }
 
 .search-box input {
-    flex: 1;
     border: none;
     outline: none;
-    padding: 8px;
-    background: transparent;
-    font-size: 0.95rem;
-    color: #333;
+    padding: 6px 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 160px;
 }
 
 .search-box button {
     background: none;
     border: none;
-    color: #b87ba1;
-    /* Rosa dourado */
-    font-size: 1rem;
+    color: #a6527a;
     cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 18px;
 }
 
-.search-box button:hover {
-    color: #d9a7c7;
-    /* Tom mais claro ao passar o mouse */
+/* ================================
+   🌸 RESULTADOS DA BUSCA
+================================ */
+#search-results {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    max-width: 260px;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    margin-top: 8px;
+    display: none;
+    max-height: 240px;
+    overflow-y: auto;
+    animation: fadeIn .25s ease;
+    z-index: 999;
 }
-.search-container {
+
+#search-results .item {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    gap: 12px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#search-results .item:hover {
+    background: #f3d6da;
+}
+
+#search-results i {
+    color: #a6527a;
+}
+
+/* ================================
+   🌸 ANIMAÇÃO
+================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================================================
+   🌸 RESPONSIVIDADE — TABLET
+========================================================= */
+@media (max-width: 992px) {
+    .container {
+        gap: 25px;
+    }
+
+    .search-box {
+        margin: auto;
+    }
+}
+
+/* =======================================================
+   🌸 RESPONSIVIDADE — CELULARES
+========================================================= */
+@media (max-width: 768px) {
+
+    /* some o menu */
+    .navbar ul {
+        display: none;
+    }
+
+    /* mostra hamburguer */
+    .hamburger {
+        display: flex;
+    }
+
+    /* menu aberto */
+    .navbar ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background: #fce3ec;
+        padding: 25px 0;
+        gap: 20px;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+        animation: fadeIn .25s ease;
+    }
+
+    .logo {
+        height: 65px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 330px;
+        margin-top: 10px;
+    }
+
+    #search-results {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 330px;
+    }
+}
+
+/* =======================================================
+   🌸 TELEFONES MUITO PEQUENOS
+========================================================= */
+@media (max-width: 480px) {
+    .logo {
+        height: 55px;
+    }
+
+    .search-box {
+        max-width: 300px;
+    }
+
+    #search-results {
+        max-width: 300px;
+    }
+}
+
+/* Garantir que o header fique acima de todos os elementos */
+.header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Menu hambúrguer sempre acima (somente mobile) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        position: relative;
+        z-index: 2000 !important;
+    }
+
+    /* Se tiver slider na home, garantir que não fique sobrepondo */
+    .home-slider,
+    .banner,
+    .section-hero {
+        z-index: 1 !important;
+        position: relative;
+    }
+}
+
+
+/* ================================
+   VLibras – Tema Rosa Feminino
+   ================================ */
+
+/* Botão flutuante */
+[vw-access-button] {
+    background-color: #d46b87 !important;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    border: 3px solid #f8e3eb !important;
+    box-shadow: 0 6px 16px rgba(212, 107, 135, 0.45) !important;
+    transition: .3s ease;
+}
+
+[vw-access-button]:hover {
+    transform: scale(1.12);
+    background-color: #e58ca6 !important;
+    box-shadow: 0 8px 24px rgba(212, 107, 135, 0.60) !important;
+}
+
+/* Caixa interna do plugin */
+[vw-plugin-wrapper] {
+    background: #fde8f0 !important;
+    /* rosa clarinho */
+    border-radius: 18px !important;
+    border: 2px solid #f3c7d6 !important;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10) !important;
+    overflow: hidden !important;
+}
+
+/* BARRA SUPERIOR (título + ícones) */
+.vw-plugin-top-wrapper {
+    background: #e7b5c8 !important;
+    /* rosa mais intenso */
+    color: #fff !important;
+}
+
+.vw-plugin-top-wrapper * {
+    color: #fff !important;
+    /* deixa ícones e texto femininos */
+}
+
+/* FUNDO DO AVATAR */
+[vw-video] {
+    background: #f7d8e4 !important;
+    /* suaviza e combina com o site */
+}
+
+/* Botão "Pular", "Configurações" etc */
+[vw-plugin-wrapper] button,
+[vw-plugin-wrapper] .vw-btn {
+    background: #d46b87 !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    font-weight: 600 !important;
+    transition: 0.2s ease !important;
+}
+
+[vw-plugin-wrapper] button:hover,
+[vw-plugin-wrapper] .vw-btn:hover {
+    background: #e07f9c !important;
+}
+
+/* Texto inferior ("Meu nome é Ícaro") */
+[vw-plugin-wrapper] .vw-text {
+    background: #d46b87 !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Scrollbar rosa */
+[vw-plugin-wrapper] ::-webkit-scrollbar-thumb {
+    background: #d46b87 !important;
+}
+
+[vw-plugin-wrapper] ::-webkit-scrollbar-track {
+    background: #fde8f0 !important;
+}
+
+/* Z-index */
+[vw].enabled {
+    z-index: 999999 !important;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #e9b9cb;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: #3d2d34;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }

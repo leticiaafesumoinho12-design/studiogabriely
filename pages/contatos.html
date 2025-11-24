@@ -5,83 +5,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Gabriella Rocha</title>
-    <link rel="stylesheet" href="../css/contatos-style.css">
-    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/contatos-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+
+
+
     <header class="header">
         <div class="container">
             <img src="../img/logo.png" alt="Logo Gabriella Rocha" class="logo">
 
+
             <nav class="navbar">
                 <ul class="menu">
                     <li><a href="../index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servico.html">Serviços</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
-                    <li><a href="cursosv1.html">Cursos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./servico.html">Serviços</a></li>
+                    <li><a href="./contatos.html" class="ativo">Contato</a></li>
+                    <li><a href="./curso.html">Cursos</a></li>
                 </ul>
             </nav>
 
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar..." />
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+            <!-- Botão Hambúrguer (mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <!-- Campo de busca -->
+            <div class="search-box">
+                <input type="text" placeholder="O que você procura?">
+                <button aria-label="Buscar"><i class="fa fa-search"></i></button>
+            </div>
+            <div id="search-results"></div>
+
         </div>
     </header>
-    <main>
-        <aside class="menu-lateral">
-            <img class="imagem-gabriely"   src="../img/imagem-gabriely.PNG" alt="imagem-gabriely">
 
-            <h2>Redes</h2>
-            <a href="https://www.instagram.com/gabrielyrochabeauty/" target="_blank" class="link instagram">Instagram</a>
-            <a href="https://wa.me/5511997326767" target="_blank" class="link whatsapp">WhatsApp</a>
-        </aside>
 
-        <div class="fale-conosco">
-            <h1>Contato rápido</h1>
-            <p>Entre em contato para agendar seu atendimento ou para fazer sua inscrição.
+
+    <div class="fale-conosco">
+        <h1>Contato rápido</h1>
+        <p class="entra-em-contato">Entre em contato para agendar seu atendimento ou para fazer sua inscrição.</p>
+    </div>
+
+    <form class="formulario">
+
+        <!-- Nome completo dividido (igual ao formulário simples) -->
+        <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
         </div>
 
+        <!-- E-mail -->
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
+        </div>
+        <div class="form-group">
+            <label for="data">Data do agendamento <span>( se o agendamento para o dia estiver
+                    disponível)</span>:</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="(\([0-9]{2}\))\s([0-9]{4,5})-([0-9]{4})"
+                placeholder="(99) 99999-9999" title="Use o formato (99) 99999-9999" required>
+        </div>
 
-        <form class="formulario">
+        <div class="form-group primeira-sessao">
+            <label class="primeira-sessao">Primeira sessão?</label>
 
-            <div class="form-group"> <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <div class="opcoes-sessao">
+                <input type="radio" id="sessao-sim" name="primeira" value="Sim" required>
+                <label class="botao-sessao" for="sessao-sim">Sim</label>
+
+                <input type="radio" id="sessao-nao" name="primeira" value="Não" required>
+                <label class="botao-sessao" for="sessao-nao">Não</label>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label for="nome">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Digite seu E-mail" required>
-            </div>
+        <button class="botao-enviar" type="submit">Enviar</button>
 
-
-            <div class="form-group">
-                <label for="number">Telefone</label>
-                <input type="tel" name="telefone" pattern="(\([0-9]{2}\))\s([0-9]{4,5})-([0-9]{4})"
-                    placeholder="(99) 99999-9999" title="Use o formato (99) 99999-9999" required>
-
-            </div>
-            <div class="form-group"> <label for="nome">Assunto</label>
-                <input type="text" id="nome" name="nome" placeholder="O que busca?" required>
-            </div>
-
-            <button class="botao-enviar" type="submit">Enviar</button>
-
-
-        </form>
+    </form>
 
     </main>
 
 
+    <div class="extra-content">
+        <h3> Experiência Premium</h3>
+        <p>Ambiente climatizado, música ambiente e o melhor atendimento personalizado.</p>
+
+        <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <p><strong>Horário de funcionamento:</strong><br>Segunda a Sábado, das 9h às 19h</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <p><strong>Endereço:</strong><br>R. Rui Barbosa, 401 - Cotia, SP, 06702-415</p>
+        </div>
+        <p class="agendar-horario">
+            <i class="fa-solid fa-calendar-check agendar-icone"></i>
+            <a href="./contatos.html" class="link-agendamento">Agende seu horário</a>
+        </p>
+
+        <h4 class="siga-nos-titulo">Entre em contato:</h4>
+
+        <div class="icones-redes">
+            <!-- Link do Instagram -->
+            <a href="https://www.instagram.com/gabrielyrochabeauty/" target="_blank" class="icone-link instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Link do WhatsApp -->
+            <a href="https://wa.me/5511997326767" target="_blank" class="icone-link whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Botão Flutuante do FAQ -->
+    <div id="modal" class="faq-content">
+        <p>Perguntas frequentes</p>
+
+        <p class="per">É normal os cílios naturais caírem?</p>
+        <p class="res">É normal que alguns fios caiam, pois isso faz parte do ciclo natural de renovação dos pelos, que
+            ocorre a cada 4 meses, em média. As extensões, quando aplicadas corretamente, não alteram esse ciclo e caem
+            junto com os fios naturais.</p>
+        <br>
+
+        <p class="per">Pode usar máscara de cílios?</p>
+        <p class="res">Se forem à base de água, sim. Porém não há necessidade, pois as extensões de cílios
+            substituem completamente o uso da máscara, dando maior praticidade ao seu dia-a-dia.</p>
+        <br>
+
+        <p class="per">Qual a durabilidade da extensão de cílios?</p>
+        <p class="res">Não há uma regra, pois a durabilidade está diretamente ligada ao ciclo de crescimento dos
+            cílios naturais e dos cuidados recomendados para as extensões. Porém para manter os cílios sempre
+            impecáveis e bonitos sugerimos manutenções entre 15 e 20 dias após a primeira aplicação.</p>
+        <br>
+
+        <p class="per">Como cuidar do alongamento de cílios?</p>
+        <p class="res">Para manter suas extensões sempre bonitas é necessário seguir alguns cuidados como: lave
+            os olhos com shampoo de bebê pelo menos 3 vezes por semana, retire sempre todo o resíduo de
+            maquiagem, escove as extensões para mantê-las alinhadas, evite o uso de máscara de cílios ou
+            produtos à base de óleo e evite coçar os olhos. Seguindo essas regrinhas, com certeza sua extensão
+            durará por muito mais tempo.</p>
+        <br>
+
+        <p class="per">O que é henna? Quanto tempo dura?</p>
+        <p class="res">A henna é um corante natural extraído de uma planta transformado em pó, serve para
+            preencher falhas temporariamente, dura entre 3 e 15 dias</p>
+        <br>
+    </div>
+    <!-- Botão para abrir/fechar -->
+    <button onclick="toggleFAQ()" class="faq-float">
+        <img src="../img/faq.png" alt="Fale conosco" class="faq">
+    </button>
 
 
 
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/contato-script.js"></script>
+
+
+    <!--Acessibilidade-->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

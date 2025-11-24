@@ -1,89 +1,95 @@
-// =================== SEU CÓDIGO ORIGINAL ===================
+// =================== NOVO CARROSSEL (INDEPENDENTE) ===================
 
-// Índice do slide atual
-let slideIndex = 1;
+// Índice do slide atual do segundo carrossel
+let slideIndex2 = 1;
 
-// Variável para controlar o timer automático
-let autoSlideTimer;
+// Timer para o carrossel automático
+let autoSlideTimer2;
 
-// Inicializa o carrossel
-showSlides(slideIndex);
-startAutoSlide();
+// Inicializa o segundo carrossel
+showSlides2(slideIndex2);
+startAutoSlide2();
 
-// Função para avançar/voltar slides manualmente
-function plusSlides(n) {
-    stopAutoSlide();
-    showSlides(slideIndex += n);
-    startAutoSlide();
+// Avançar/voltar manualmente
+function plusSlides2(n) {
+    stopAutoSlide2();
+    showSlides2(slideIndex2 += n);
+    startAutoSlide2();
 }
 
-// Função para ir para um slide específico (dots)
-function currentSlide(n) {
-    stopAutoSlide();
-    showSlides(slideIndex = n);
-    startAutoSlide();
+// Ir para um slide específico (dots)
+function currentSlide2(n) {
+    stopAutoSlide2();
+    showSlides2(slideIndex2 = n);
+    startAutoSlide2();
 }
 
-// Função principal que exibe os slides
-function showSlides(n) {
+// Função principal que mostra os slides
+function showSlides2(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
+    let slides2 = document.getElementsByClassName("mySlides2");
+    let dots2 = document.getElementsByClassName("dot2");
 
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
+    if (slides2.length === 0) return; // EVITA ERRO SE NÃO TIVER SLIDES
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    if (n > slides2.length) slideIndex2 = 1;
+    if (n < 1) slideIndex2 = slides2.length;
+
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    // Só mexe nos dots SE eles existirem
+    if (dots2.length > 0) {
+        for (i = 0; i < dots2.length; i++) {
+            dots2[i].className = dots2[i].className.replace(" active", "");
+        }
+        dots2[slideIndex2 - 1].className += " active";
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides2[slideIndex2 - 1].style.display = "block";
 }
 
-// Função para iniciar o carrossel automático
-function startAutoSlide() {
-    autoSlideTimer = setInterval(() => {
-        slideIndex++;
-        showSlides(slideIndex);
+// Inicia o carrossel automático
+function startAutoSlide2() {
+    autoSlideTimer2 = setInterval(() => {
+        slideIndex2++;
+        showSlides2(slideIndex2);
     }, 4000);
 }
 
-// Função para parar o carrossel automático
-function stopAutoSlide() {
-    clearInterval(autoSlideTimer);
+// Para o carrossel automático
+function stopAutoSlide2() {
+    clearInterval(autoSlideTimer2);
 }
 
-// Pausa o carrossel quando o mouse está sobre ele
-document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
-    stopAutoSlide();
+// Pausa quando o mouse passa por cima
+document.querySelector('.slideshow-container2').addEventListener('mouseenter', () => {
+    stopAutoSlide2();
 });
 
-// Retoma o carrossel quando o mouse sai
-document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
-    startAutoSlide();
+// Retoma quando o mouse sai
+document.querySelector('.slideshow-container2').addEventListener('mouseleave', () => {
+    startAutoSlide2();
 });
 
 
-/// =====================================
-// ITENS DA BUSCA (coloque seus links reais aqui)
-// =====================================
+
+
+
+// =================== BUSCA ===================
+
+// Itens da busca
 const itens = [
-    { nome: "inicio", icone: "fa-star", link: "index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "./pages/servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "./pages/contatos.html" },
+    { nome: "inicio", icone: "fa-star", link: "../index.html" },
+    { nome: "Serviços", icone: "fa-briefcase", link: "./servico.html" },
+    { nome: "Contato", icone: "fa-envelope", link: "./contatos.html" },
     { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
     { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre ", icone: "fa-user", link: "./pages/sobre.html" },
-    { nome: "cursos", icone: "fa-user", link: "./pages/curso.html" },
-
+    { nome: "Sobre ", icone: "fa-user", link: "./sobre.html" },
+    { nome: "Cursos", icone: "fa-graduation-cap", link: "./curso.html" },
 ];
 
-// Criar caixa de resultados
 let resultsBox = document.getElementById("search-results");
 
 function similaridade(a, b) {
@@ -96,7 +102,6 @@ function similaridade(a, b) {
     return pontos / b.length;
 }
 
-// Função da busca
 function buscar() {
     const texto = document.querySelector(".search-box input").value.trim().toLowerCase();
     resultsBox.innerHTML = "";
@@ -142,8 +147,44 @@ document.querySelector(".search-box button").addEventListener("click", buscar);
 document.querySelector(".search-box input").addEventListener("keydown", (e) => {
     if (e.key === "Enter") buscar();
 });
+// =================== CARDS ===================
+function toggleCard() {
+  const card = document.getElementById("meuCard");
+  card.classList.toggle("expandido");
+}
+// ===== FAQ MODAL =====
+function toggleFAQ() {
+    const modal = document.getElementById("modal");
+    
+    if (modal) {
+        modal.classList.toggle("fac-show");
+    }
+}
 
+// Fechar ao clicar fora do modal
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById("modal");
+    const button = document.querySelector(".faq-float");
+    
+    // Verifica se o clique foi fora do modal e do botão
+    if (modal && button) {
+        const isClickInsideModal = modal.contains(event.target);
+        const isClickOnButton = button.contains(event.target);
+        
+        if (!isClickInsideModal && !isClickOnButton && modal.classList.contains("fac-show")) {
+            modal.classList.remove("fac-show");
+        }
+    }
+});
 
+// Fechar com a tecla ESC
+document.addEventListener('keydown', function(event) {
+    const modal = document.getElementById("modal");
+    
+    if (event.key === "Escape" && modal && modal.classList.contains("fac-show")) {
+        modal.classList.remove("fac-show");
+    }
+});
 // ================================
 // 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
 // ================================
