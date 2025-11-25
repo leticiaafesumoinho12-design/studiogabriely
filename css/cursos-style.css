@@ -18,12 +18,16 @@ main {
 .texto-intro {
     flex: 1;
     min-width: 300px;
+    text-align: left;
+    /* textos à esquerda */
 }
 
 .texto-intro h2 {
     font-size: 2.2em;
     color: #b25770;
     margin-bottom: 15px;
+    text-align: center;
+    /* TÍTULO CENTRALIZADO */
 }
 
 .texto-intro p {
@@ -42,6 +46,7 @@ main {
 /* ===== LISTA DE CURSOS ===== */
 .lista-cursos h2 {
     text-align: center;
+    /* CENTRALIZADO */
     font-size: 2em;
     color: #b25770;
     margin-bottom: 40px;
@@ -78,12 +83,16 @@ main {
 .curso-info {
     flex: 1;
     min-width: 250px;
+    text-align: left;
+    /* texto normal à esquerda */
 }
 
 .curso-info h3 {
     font-size: 1.5em;
     color: #b25770;
     margin-bottom: 10px;
+    text-align: center;
+    /* TÍTULO DO CARD CENTRALIZADO */
 }
 
 .curso-info p {
@@ -122,8 +131,6 @@ main {
     color: #fff;
 }
 
-
-
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 900px) {
     .curso-card {
@@ -139,5 +146,10 @@ main {
     .texto-intro,
     .curso-info {
         text-align: center;
+    }
+
+    .curso-info p {
+        text-align: justify;
+        /* mantém texto alinhado */
     }
 }

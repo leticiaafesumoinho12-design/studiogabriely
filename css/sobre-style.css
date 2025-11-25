@@ -305,7 +305,7 @@ strong {
         width: 90%;
         margin: 0 auto;
         font-size: 1rem;
-        text-align: justify;
+        text-align: left;
     }
 }
 
@@ -352,9 +352,5 @@ strong {
 
     footer p {
         font-size: 0.8rem;
-    }
-
-    .logo {
-        width: 120px;
     }
 }

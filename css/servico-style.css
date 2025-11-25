@@ -201,6 +201,12 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
+.dica-card h3 {
+    color: #b25770;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
 /* ============================== */
 /* RESPONSIVO            */
 /* ============================== */
@@ -260,102 +266,66 @@ main {
 
     .dicas h2 {
         font-size: 1.6rem;
+
     }
 }
 
-/* Celulares pequenos (até 480px) */
+.tabela-precos {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.tabela-precos table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff8fb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela-precos th {
+    background-color: #f2cade;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.tabela-precos td {
+    padding: 15px;
+    border-bottom: 1px solid #f4dce9;
+    font-size: 1rem;
+}
+
+.tabela-precos tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-precos tr:hover {
+    background-color: #ffeef7;
+}
+
+
+/* ============================
+   RESPONSIVIDADE (até 480px)
+   — ROLAGEM LATERAL
+============================ */
+
 @media (max-width: 480px) {
 
-    /* --- Responsividade da Tabela: Transforma em Cartão --- */
-
     .tabela-precos {
-        padding: 20px 10px;
-    }
-
-    .tabela-precos thead {
-        display: none;
-        /* Esconde o cabeçalho original */
+        width: 100%;
+        overflow-x: auto;
+        /* 👉 faz rolar pro lado */
+        display: block;
+        white-space: nowrap;
+        /* 👉 evita quebra */
+        padding-bottom: 10px;
     }
 
     .tabela-precos table {
-        border-spacing: 0;
-        display: block;
-    }
-
-    .tabela-precos tr {
-        display: block;
-        /* Linha vira um bloco (cartão) */
-        margin-bottom: 20px;
-        border: 1px solid #f4cfe0;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        background-color: #fff8fb;
-    }
-
-    .tabela-precos td {
-        display: block;
-        /* Célula vira um bloco de informação */
-        text-align: right;
-        padding: 10px 15px;
-        border: none;
-        position: relative;
-        padding-left: 50%;
-        /* Espaço para o rótulo */
-        font-size: 1em;
-    }
-
-    /* Rótulo virtual usando data-label do HTML */
-    .tabela-precos td:before {
-        content: attr(data-label) ":";
-        position: absolute;
-        left: 15px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        font-weight: 700;
-        color: #000;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        text-align: left;
-    }
-
-    /* Destaque para o nome do Serviço (primeiro TD) */
-    .tabela-precos tr td:first-child {
-        font-size: 1.1em;
-        font-weight: 700;
-        background-color: #f2cde0;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        color: #000;
-        text-align: center;
-        /* Centraliza o nome do serviço */
-        padding-left: 15px;
-    }
-
-    /* Remove o rótulo do nome do serviço */
-    .tabela-precos tr td:first-child:before {
-        content: "";
-    }
-
-    /* Destaque para o Preço (último TD) */
-    .tabela-precos tr td:last-child {
-        background-color: #f8d8e7;
-        font-weight: 700;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
-    .tabela-precos tr:hover td {
-        background-color: #fff8fb;
-        transform: none;
-    }
-
-    /* Outros ajustes de mobile */
-    .servico-imagens img {
-        max-width: 100% !important;
-    }
-
-    .servico-texto h2 {
-        font-size: 1.5em;
+        min-width: 600px;
+        /* 👉 largura mínima para gerar scroll */
     }
 }
