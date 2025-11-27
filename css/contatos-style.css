@@ -12,7 +12,8 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.formulario input {
+.formulario input,
+.formulario select {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
