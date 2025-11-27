@@ -1,3 +1,51 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    const selectTipoContato = document.getElementById('tipo-contato');
+    const grupoHorario = document.getElementById('grupo-horario');
+    const grupoData = document.getElementById('grupo-data');
+    const inputHorario = document.getElementById('horario');
+    const inputData = document.getElementById('data');
+
+
+    function atualizarCamposAgendamento() {
+        if (selectTipoContato.value === 'curso') {
+            // Esconde os campos e remove a obrigatoriedade
+            grupoHorario.style.display = 'none';
+            grupoData.style.display = 'none';
+
+            inputHorario.removeAttribute('required');
+            inputData.removeAttribute('required');
+
+            inputHorario.value = '';
+            inputData.value = '';
+        } else if (selectTipoContato.value === 'agendamento') {
+            // Mostra os campos e volta a exigir o preenchimento
+            grupoHorario.style.display = '';
+            grupoData.style.display = '';
+
+            inputHorario.setAttribute('required', 'required');
+            inputData.setAttribute('required', 'required');
+        } else {
+            // Estado inicial (opção "Selecione uma opção")
+            grupoHorario.style.display = '';
+            grupoData.style.display = '';
+
+            inputHorario.setAttribute('required', 'required');
+            inputData.setAttribute('required', 'required');
+        }
+    }
+
+    // Atualiza ao mudar a seleção
+    selectTipoContato.addEventListener('change', atualizarCamposAgendamento);
+
+    // Garante o estado correto ao carregar a página
+    atualizarCamposAgendamento();
+});
+
+
+
+
+
 /// =====================================
 // ITENS DA BUSCA (coloque seus links reais aqui)
 // =====================================
@@ -66,7 +114,7 @@ function buscar() {
 // ===== FAQ MODAL =====
 function toggleFAQ() {
     const modal = document.getElementById("modal");
-    
+
     if (modal) {
         modal.classList.toggle("fac-show");
     }
@@ -79,15 +127,15 @@ document.querySelector(".search-box input").addEventListener("keydown", (e) => {
     if (e.key === "Enter") buscar();
 });
 // Fechar ao clicar fora do modal
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const modal = document.getElementById("modal");
     const button = document.querySelector(".faq-float");
-    
+
     // Verifica se o clique foi fora do modal e do botão
     if (modal && button) {
         const isClickInsideModal = modal.contains(event.target);
         const isClickOnButton = button.contains(event.target);
-        
+
         if (!isClickInsideModal && !isClickOnButton && modal.classList.contains("fac-show")) {
             modal.classList.remove("fac-show");
         }
@@ -95,9 +143,9 @@ document.addEventListener('click', function(event) {
 });
 
 // Fechar com a tecla ESC
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     const modal = document.getElementById("modal");
-    
+
     if (event.key === "Escape" && modal && modal.classList.contains("fac-show")) {
         modal.classList.remove("fac-show");
     }
@@ -168,4 +216,56 @@ document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-box")) {
         searchResults.style.display = "none";
     }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const selectTipoContato = document.getElementById('tipo-contato');
+    const grupoPrimeiraSessao = document.getElementById('grupo-primeira-sessao');
+
+    function atualizarSessao() {
+        if (selectTipoContato.value === 'curso') {
+            grupoPrimeiraSessao.style.display = 'none';
+
+            // remove necessidade de escolher sim/não
+            document.getElementById('sessao-sim').removeAttribute('required');
+            document.getElementById('sessao-nao').removeAttribute('required');
+        } else {
+            grupoPrimeiraSessao.style.display = '';
+
+            // volta a exigir
+            document.getElementById('sessao-sim').setAttribute('required', 'required');
+            document.getElementById('sessao-nao').setAttribute('required', 'required');
+        }
+    }
+
+    selectTipoContato.addEventListener('change', atualizarSessao);
+    atualizarSessao(); // estado inicial
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const telefoneInput = document.getElementById('telefone');
+
+    telefoneInput.addEventListener('input', function () {
+        let valor = telefoneInput.value.replace(/\D/g, ""); // remove tudo que não é número
+
+        // limita a 11 números (DDD + 9 dígitos)
+        if (valor.length > 11) valor = valor.slice(0, 11);
+
+        // aplica a máscara
+        if (valor.length > 6) {
+            telefoneInput.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7)}`;
+        }
+        else if (valor.length > 2) {
+            telefoneInput.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
+        }
+        else if (valor.length > 0) {
+            telefoneInput.value = `(${valor}`;
+        }
+        else {
+            telefoneInput.value = "";
+        }
+    });
 });

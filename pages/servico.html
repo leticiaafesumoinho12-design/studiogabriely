@@ -43,11 +43,12 @@
 
     <main>
 
-        <section class="servico">
+        <!-- seção padrão: texto primeiro, imagens depois (desktop) -->
+        <section class="servico" id="cilios">
             <div class="servico-texto">
                 <h2>Cílios</h2>
-                <p>Realçar o olhar é também realçar quem somos. As extensões de cílios trazem leveza, charme e um toque
-                    especial.</p>
+                <p>Realçar o olhar é valorizar a nossa essência. As extensões de cílios trazem suavidade, beleza e um
+                    toque único..</p>
             </div>
 
             <div class="servico-imagens">
@@ -56,7 +57,8 @@
             </div>
         </section>
 
-        <section class="servico" id="sobrancelhas">
+        <!-- seção invertida -->
+        <section class="servico servico--reverse" id="sobrancelhas">
             <div class="servico-imagens">
                 <img src="../img/Capturar12.PNG" alt="Sobrancelha 1">
                 <img src="../img/Capturar2.PNG" alt="Sobrancelha 2">
@@ -64,10 +66,11 @@
 
             <div class="servico-texto">
                 <h2>Sobrancelhas</h2>
-                <p>As sobrancelhas realçam o olhar e valorizam os traços naturais, transmitindo equilíbrio e
-                    personalidade.</p>
+                <p>As sobrancelhas valorizam o olhar e destacam os traços naturais, trazendo equilíbrio e personalidade
+                    ao rosto.</p>
             </div>
         </section>
+
         <h2 class="titulo-tabela-precos">Tabela de Preços</h2>
 
         <section class="tabela-precos">
@@ -82,39 +85,43 @@
 
                 <tbody>
                     <tr>
-                        <td data-label="Serviço">Extensão Clássica</td>
-                        <td data-label="Descrição">Olhar natural e delicado.</td>
-                        <td data-label="Preço">R$ 120,00</td>
+                        <td data-label="Serviço">Volume Brasileiro</td>
+                        <td data-label="Descrição">Leve e poderoso.</td>
+                        <td data-label="Preço">R$ 160,00</td>
                     </tr>
                     <tr>
-                        <td data-label="Serviço">Volume Russo</td>
-                        <td data-label="Descrição">Olhar marcante e volumoso.</td>
+                        <td data-label="Serviço">Efeito molhado</td>
+                        <td data-label="Descrição">Brilho e definição.</td>
+                        <td data-label="Preço">R$ 170,00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Serviço">Clássico fio a fio</td>
+                        <td data-label="Descrição">Naturalidade que realça sua beleza.</td>
                         <td data-label="Preço">R$ 150,00</td>
                     </tr>
                     <tr>
-                        <td data-label="Serviço">Híbrido</td>
-                        <td data-label="Descrição">Clássico + Volume</td>
-                        <td data-label="Preço">R$ 140,00</td>
+                        <td data-label="Serviço">Brow Lamination</td>
+                        <td data-label="Descrição">Fios alinhados e natural.</td>
+                        <td data-label="Preço">R$ 100,00</td>
                     </tr>
                     <tr>
-                        <td data-label="Serviço">Mega Volume</td>
-                        <td data-label="Descrição">Fios densos e glamourosos.</td>
-                        <td data-label="Preço">R$ 180,00</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Serviço">Manutenção</td>
-                        <td data-label="Descrição">Reaplicação para manter o visual.</td>
-                        <td data-label="Preço">R$ 80,00</td>
+                        <td data-label="Serviço">Design Com Henna</td>
+                        <td data-label="Descrição">Realce seus traços com naturalidade.</td>
+                        <td data-label="Preço">R$ 60,00</td>
                     </tr>
                     <tr>
                         <td data-label="Serviço">Design Sobrancelhas</td>
                         <td data-label="Descrição">Modelagem conforme o rosto.</td>
-                        <td data-label="Preço">R$ 80,00</td>
+                        <td data-label="Preço">R$ 35,00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Serviço">Manutenção</td>
+                        <td data-label="Descrição">Seu olhar sempre perfeito</td>
+                        <td data-label="Preço">R$ 110,00</td>
                     </tr>
                 </tbody>
             </table>
         </section>
-
 
         <section class="dicas">
             <h2>Dicas Rápidas de Beleza</h2>
@@ -144,9 +151,22 @@
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="https://cdn.userway.org/widget.js" data-account="aiWM53hyE5"></script>
-
     <script src="../js/servico-script.js"></script>
+
+    <!-- VLibras (LIBRAS funcionando) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 </body>
 

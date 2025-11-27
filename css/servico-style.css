@@ -71,6 +71,16 @@ main {
     transform: scale(1.05);
 }
 
+.titulo-tabela-precos {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b25770;
+    margin: 40px 0 20px 0;
+}
+
+
+
 /* ===== TABELA DE PREÇOS ===== */
 .tabela-precos {
     background-color: #fff;
@@ -233,7 +243,12 @@ main {
 /* Celulares grandes (até 768px) */
 @media (max-width: 768px) {
 
-    /* Força as imagens para coluna em telas menores */
+    /* 👉 Texto acima das imagens no responsivo */
+    .servico {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .servico-imagens {
         flex-direction: column;
         gap: 15px;
@@ -251,7 +266,6 @@ main {
         font-size: 1em;
     }
 
-    /* Faz os cards de dicas ficarem em coluna */
     .dicas-container {
         grid-template-columns: 1fr;
     }
@@ -266,7 +280,6 @@ main {
 
     .dicas h2 {
         font-size: 1.6rem;
-
     }
 }
 
@@ -327,5 +340,21 @@ main {
     .tabela-precos table {
         min-width: 600px;
         /* 👉 largura mínima para gerar scroll */
+    }
+
+    .servico,
+    .servico--reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .servico-texto {
+        order: 0 !important;
+        /* texto sempre vem primeiro */
+    }
+
+    .servico-imagens {
+        order: 1 !important;
+        /* imagens depois */
     }
 }
