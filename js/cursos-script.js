@@ -98,11 +98,15 @@ const searchInput = document.querySelector('.search-box input');
 const searchResults = document.getElementById('search-results');
 
 const items = [
-    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-eye" },
-    { nome: "Design", link: "./pages/servico.html", icon: "fa-star" },
-    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-book" },
-    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-calendar" },
-    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-user" }
+    { nome: "Sobrancelhas", link: "./servico.html", icon: "fa-solid fa-eye" },
+    { nome: "Design", link: "./servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
+    { nome: "Curso de Sobrancelhas", link: "./curso.html", icon: "fa-solid fa-graduation-cap" },
+    { nome: "Curso de extensão de cilios", link: "./curso.html", icon: "fa-solid fa-spa" },
+    { nome: "Agendar", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Sobre mim", link: "./sobre.html", icon: "fa-solid fa-user" },
+    { nome: "Inicio", link: "../index.html", icon: "fa-solid fa-house" },
+    { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
+    { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
 ];
 
 // Mostrar os resultados

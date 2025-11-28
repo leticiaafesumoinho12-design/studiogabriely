@@ -51,8 +51,8 @@
     justify-content: center;
 }
 
-span{
-  font-weight: bold;
+.if {
+    font-weight: bold;
 }
 
 /* CARD PRINCIPAL */
@@ -134,7 +134,7 @@ span{
 
 .icone-link:hover {
     transform: translateY(-6px) scale(1.12) rotate(-5deg);
-    background: #b8b6b7;
+    background: white;
 
 }
 
@@ -286,7 +286,7 @@ span{
 }
 
 /* Título */
-.faq-content>p:first-child {
+.perg {
     font-size: 1.4rem;
     font-weight: 700;
     color: #cd316f;
@@ -340,6 +340,8 @@ span{
 .faq-float img {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 /* Esconde o botão quando o modal está aberto */
@@ -365,6 +367,13 @@ span{
 
 .faq-content.fac-show::-webkit-scrollbar-thumb:hover {
     background: #ff6fa8;
+}
+.close{
+    padding: 3px 8px;
+    color: #f1f1f1;
+    background-color: #cd316f;
+    border-radius: 50%;
+    border: none;
 }
 
 

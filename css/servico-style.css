@@ -166,6 +166,37 @@ main {
     background-color: #ffeef7;
     transform: scale(1.01);
 }
+/*CATÁLOGO*/
+.catalogo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #4b4b4b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.catalogo p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.catalogo a {
+    color: #d63384; /* cor rosê elegante */
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.catalogo a:hover {
+    color: #b0266b;
+    text-decoration: underline;
+}
+
 
 /* ===== SEÇÃO DE DICAS ===== */
 .dicas {
@@ -204,11 +235,13 @@ main {
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   text-align: left;
 }
 
 .dica-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+   
 }
 
 .dica-card h3 {

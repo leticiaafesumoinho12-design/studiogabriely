@@ -89,7 +89,7 @@
         </div>
 
         <div class="form-group" id="grupo-data">
-            <label for="data">Data do agendamento <span>( se o agendamento para o dia estiver
+            <label for="data">Data do agendamento <span class="if">( se o agendamento para o dia estiver
                     disponível)</span>:</label>
             <input type="date" id="data" name="data" required>
         </div>
@@ -117,7 +117,7 @@
 
     <div class="extra-content">
         <h3> Experiência Premium</h3>
-        <p>Ambiente climatizado, música ambiente e o melhor atendimento personalizado.</p>
+        <p> Atendimento personalizado, clima agradável e música ambiente criando a atmosfera perfeita para você.</p>
 
         <div class="info-card">
             <i class="fa-solid fa-clock"></i>
@@ -153,7 +153,11 @@
     </div>
     <!-- Botão Flutuante do FAQ -->
     <div id="modal" class="faq-content">
-        <p>Perguntas frequentes</p>
+        <span>
+            <button class="close" onclick="toggleFAQ()">x</button>
+        </span>
+
+        <p class="perg">Perguntas frequentes</p>
 
         <p class="per">É normal os cílios naturais caírem?</p>
         <p class="res">É normal que alguns fios caiam, pois isso faz parte do ciclo natural de renovação dos pelos, que
@@ -193,6 +197,8 @@
 
 
     </div>
+
+  
     <footer class="footer">
         <p>&copy; 2025 Gabriely Rocha. Todos os direitos reservados.</p>
     </footer>

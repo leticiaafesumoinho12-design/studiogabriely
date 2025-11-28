@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    text-align: left;
     gap: 40px;
     flex-wrap: wrap;
     text-align: justify;
@@ -48,7 +49,6 @@ strong {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding-right: 150px;
     align-items: center;
     gap: 100px;
     flex-wrap: wrap;
@@ -100,25 +100,7 @@ strong {
     transform: translateY(-5px);
 }
 
-.card.expandido {
-    width: auto;
-    height: 500px;
-}
 
-/* conteúdo escondido */
-.escondido {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: 0.3s ease;
-}
-
-/* quando aparecer */
-.card.expandido .escondido {
-    max-height: 500px;
-    /* altura grande para abrir */
-    opacity: 1;
-}
 
 .card img {
     width: 100%;
@@ -129,6 +111,7 @@ strong {
 
 .card p {
     margin: 15px 0;
+    text-align: left;
 }
 
 .link{
@@ -197,6 +180,7 @@ strong {
 .text {
     color: #fff;
     font-size: 1.1rem;
+    text-align: left;
     padding: 10px 15px;
     position: absolute;
     bottom: 10px;
@@ -239,14 +223,6 @@ strong {
 
 
 
-/* Responsividade */
-@media (max-width: 480px) {
-    .faq-content.fac-show {
-        width: calc(100vw - 40px);
-        max-width: 350px;
-        right: 20px;
-    }
-}
 
 /* ===== RODAPÉ ===== */
 .rodape {
@@ -291,7 +267,7 @@ strong {
         flex-direction: column; /* imagem em cima */
         padding: 8px;
         align-items: center;
-        gap: 25px;
+        gap: 30px;
         text-align: center;
     }
 
@@ -330,10 +306,6 @@ strong {
         padding: 20px 10px;
     }
 
-    .faq-float {
-        width: 55px;
-        height: 55px;
-    }
 }
 
 /* ===================== */
