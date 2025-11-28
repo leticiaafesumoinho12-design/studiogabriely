@@ -171,12 +171,16 @@ const searchInput = document.querySelector('.search-box input');
 const searchResults = document.getElementById('search-results');
 
 const items = [
-    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-eye" },
-    { nome: "Design", link: "./pages/servico.html", icon: "fa-star" },
-    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-book" },
-    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-calendar" },
-    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-user" }
+    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-solid fa-eye" },
+    { nome: "Design", link: "./pages/servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
+    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-solid fa-graduation-cap" },
+    { nome: "Curso de extensão de cilios", link: "./pages/curso.html", icon: "fa-solid fa-spa" },
+    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-solid fa-user" },
+    { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
+    { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
 ];
+
 
 // Mostrar os resultados
 searchInput.addEventListener('input', () => {
@@ -211,3 +215,37 @@ document.addEventListener("click", (e) => {
         searchResults.style.display = "none";
     }
 });
+// ⭐ Sistema de Avaliação
+const stars = document.querySelectorAll(".estrelas i");
+const msgSucesso = document.querySelector(".msg-sucesso");
+const comentario = document.querySelector(".comentario");
+
+let notaSelecionada = 0;
+
+stars.forEach(star => {
+    star.addEventListener("click", function () {
+        notaSelecionada = this.getAttribute("data-star");
+
+        stars.forEach(s => s.classList.remove("selecionada"));
+
+        for (let i = 0; i < notaSelecionada; i++) {
+            stars[i].classList.add("selecionada");
+        }
+    });
+});
+
+// Botão enviar
+document.querySelector(".btn-enviar").addEventListener("click", () => {
+    if (notaSelecionada === 0 || comentario.value.trim() === "") {
+        alert("Por favor, selecione uma nota e escreva um comentário.");
+        return;
+    }
+
+    msgSucesso.style.display = "block";
+    comentario.value = "";
+    stars.forEach(s => s.classList.remove("selecionada"));
+    notaSelecionada = 0;
+
+    setTimeout(() => msgSucesso.style.display = "none", 3000);
+});
+

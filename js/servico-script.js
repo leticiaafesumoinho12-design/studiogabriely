@@ -1,17 +1,26 @@
-const itens = [
-    { nome: "inicio", icone: "fa-star", link: "../index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "./servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "./contatos.html" },
-    { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
-    { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre ", icone: "fa-user", link: "./sobre.html" },
-    { nome: "Cursos", icone: "fa-graduation-cap", link: "./curso.html" },
+// ================================
+//  LISTA DE ITENS PARA BUSCA
+// ================================
+const items = [
+    { nome: "Sobrancelhas", link: "./servico.html", icon: "fa-solid fa-eye" },
+    { nome: "Design", link: "./servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
+    { nome: "Curso de Sobrancelhas", link: "./curso.html", icon: "fa-solid fa-graduation-cap" },
+    { nome: "Curso de extensão de cilios", link: "./curso.html", icon: "fa-solid fa-spa" },
+    { nome: "Agendar", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Sobre mim", link: "./sobre.html", icon: "fa-solid fa-user" },
+    { nome: "Inicio", link: "../index.html", icon: "fa-solid fa-house" },
+    { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
+    { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
 ];
 
 let resultsBox = document.getElementById("search-results");
 let input = document.querySelector(".search-box input");
 let button = document.querySelector(".search-box button");
 
+
+// ================================
+//  FUNÇÃO DE SIMILARIDADE
+// ================================
 function similaridade(a, b) {
     a = a.toLowerCase();
     b = b.toLowerCase();
@@ -23,6 +32,10 @@ function similaridade(a, b) {
     return pontos / b.length;
 }
 
+
+// ================================
+//  FUNÇÃO DE BUSCA
+// ================================
 function buscar() {
     const texto = input.value.trim().toLowerCase();
     resultsBox.innerHTML = "";
@@ -66,6 +79,10 @@ function buscar() {
     }
 }
 
+
+// ================================
+// EVENTOS DA BUSCA
+// ================================
 button.addEventListener("click", buscar);
 input.addEventListener("keydown", (e) => { if (e.key === "Enter") buscar(); });
 
@@ -74,6 +91,7 @@ input.addEventListener("input", () => {
     clearTimeout(delay);
     delay = setTimeout(buscar, 250);
 });
+
 
 document.addEventListener("click", (e) => {
     if (!document.querySelector(".search-box").contains(e.target)) {
@@ -88,70 +106,23 @@ input.addEventListener("focus", () => {
         }, 300);
     }
 });
+
+
 // ================================
-// 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
+// BOTÃO HAMBÚRGUER + MENU MOBILE
 // ================================
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navbar ul');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active'); // animação do X
-    navMenu.classList.toggle('active');   // abre o menu
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
 
-// Fecha o menu ao clicar em um link
+// Fecha ao clicar em um link
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     });
-});
-
-
-// ================================
-// 🌸 SISTEMA DE BUSCA
-// ================================
-const searchInput = document.querySelector('.search-box input');
-const searchResults = document.getElementById('search-results');
-
-const items = [
-    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-eye" },
-    { nome: "Design", link: "./pages/servico.html", icon: "fa-star" },
-    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-book" },
-    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-calendar" },
-    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-user" }
-];
-
-// Mostrar os resultados
-searchInput.addEventListener('input', () => {
-    const searchText = searchInput.value.toLowerCase().trim();
-
-    if (searchText === "") {
-        searchResults.style.display = "none";
-        return;
-    }
-
-    const resultadosFiltrados = items.filter(item =>
-        item.nome.toLowerCase().includes(searchText)
-    );
-
-    if (resultadosFiltrados.length === 0) {
-        searchResults.innerHTML = `<p style="padding:10px;">Nenhum resultado encontrado...</p>`;
-    } else {
-        searchResults.innerHTML = resultadosFiltrados.map(item => `
-            <div class="item" onclick="window.location.href='${item.link}'">
-                <i class="fa ${item.icon}"></i>
-                <span>${item.nome}</span>
-            </div>
-        `).join('');
-    }
-
-    searchResults.style.display = "block";
-});
-
-// Ocultar resultados ao clicar fora
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-box")) {
-        searchResults.style.display = "none";
-    }
 });

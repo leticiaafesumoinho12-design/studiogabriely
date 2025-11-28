@@ -36,11 +36,6 @@ header {
     height: 80px;
 }
 
-.ativo {
-    color: #b87ba1 !important;
-    text-decoration: underline !important;
-}
-
 /* ================================
    🌸 MENU (DESKTOP)
 ================================ */
@@ -56,11 +51,23 @@ header {
     text-decoration: none;
     color: #000;
     font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
     transition: 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #b87ba1;
+    background-color: #dba8c4;
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a.ativo {
+    background-color: #b87ba1;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* ================================
@@ -216,6 +223,7 @@ header {
         width: 100%;
         background: #fce3ec;
         padding: 25px 0;
+        padding-left: 10px;
         gap: 20px;
         border-radius: 0 0 18px 18px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
@@ -270,7 +278,6 @@ header {
         z-index: 2000 !important;
     }
 
-    /* Se tiver slider na home, garantir que não fique sobrepondo */
     .home-slider,
     .banner,
     .section-hero {
@@ -279,12 +286,10 @@ header {
     }
 }
 
-
 /* ================================
    VLibras – Tema Rosa Feminino
-   ================================ */
+================================ */
 
-/* Botão flutuante */
 [vw-access-button] {
     background-color: #d46b87 !important;
     border-radius: 50% !important;
@@ -301,35 +306,27 @@ header {
     box-shadow: 0 8px 24px rgba(212, 107, 135, 0.60) !important;
 }
 
-/* Caixa interna do plugin */
 [vw-plugin-wrapper] {
     background: #fde8f0 !important;
-    /* rosa clarinho */
     border-radius: 18px !important;
     border: 2px solid #f3c7d6 !important;
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10) !important;
     overflow: hidden !important;
 }
 
-/* BARRA SUPERIOR (título + ícones) */
 .vw-plugin-top-wrapper {
     background: #e7b5c8 !important;
-    /* rosa mais intenso */
     color: #fff !important;
 }
 
 .vw-plugin-top-wrapper * {
     color: #fff !important;
-    /* deixa ícones e texto femininos */
 }
 
-/* FUNDO DO AVATAR */
 [vw-video] {
     background: #f7d8e4 !important;
-    /* suaviza e combina com o site */
 }
 
-/* Botão "Pular", "Configurações" etc */
 [vw-plugin-wrapper] button,
 [vw-plugin-wrapper] .vw-btn {
     background: #d46b87 !important;
@@ -346,14 +343,12 @@ header {
     background: #e07f9c !important;
 }
 
-/* Texto inferior ("Meu nome é Ícaro") */
 [vw-plugin-wrapper] .vw-text {
     background: #d46b87 !important;
     color: white !important;
     font-weight: 600 !important;
 }
 
-/* Scrollbar rosa */
 [vw-plugin-wrapper] ::-webkit-scrollbar-thumb {
     background: #d46b87 !important;
 }
@@ -362,11 +357,9 @@ header {
     background: #fde8f0 !important;
 }
 
-/* Z-index */
 [vw].enabled {
     z-index: 999999 !important;
 }
-
 
 /* FOOTER */
 .footer {

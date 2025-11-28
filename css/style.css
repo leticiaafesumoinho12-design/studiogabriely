@@ -52,6 +52,10 @@ main {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
+.testimonial-card {
+    text-align: center;
+}
+
 .dot {
     cursor: pointer;
     height: 10px;
@@ -79,16 +83,20 @@ main {
 
 /* VÍDEO */
 .video-container {
-    text-align: center;
-    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .video-container video {
     width: 100%;
     max-width: 600px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
+
 
 /* COLUNA DIREITA */
 .right-content {
@@ -198,7 +206,7 @@ p {
 
 .icone-link:hover {
     transform: translateY(-6px) scale(1.12) rotate(-5deg);
-    background: #b8b6b7;
+    background: white;
 
 }
 
@@ -226,55 +234,118 @@ p {
     font-size: 28px;
 }
 
-/* DEPOIMENTOS */
-.depoimentos {
-    text-align: center;
-    padding: 60px 10%;
-    background-color: #fce6ef;
-    border-radius: 20px;
-    margin-top: 50px;
-    box-shadow: 0 0 20px rgba(178, 83, 120, 0.15);
-}
-
+/* ============================================================
+   TÍTULO DOS DEPOIMENTOS
+============================================================ */
 .depoimentos h2 {
-    color: #b25378;
-    font-size: 26px;
-    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #c14467;
+    letter-spacing: 1px;
 }
 
-.testimonials-row {
+/* ============================================================
+   CONTAINER DOS CARDS
+============================================================ */
+.depoimentos .testimonials-row {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    align-items: flex-start;
+    gap: 30px;
     flex-wrap: wrap;
+    padding: 50px 20px;
 }
 
-.testimonial-card {
+/* ============================================================
+   CARD
+============================================================ */
+.depoimentos .testimonials-row .testimonial-card {
     background: #fff;
+    width: 260px;
+    height: 260px;
+    /* Altura padronizada para alinhamento perfeito */
     padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    color: #4b2f3c;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 182, 193, 0.45);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    /* Centraliza tudo */
+    align-items: center;
+}
+
+/* Hover */
+.depoimentos .testimonials-row .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Glow rosado */
+.depoimentos .testimonials-row .testimonial-card:hover::after {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    background: rgba(255, 190, 210, 0.55);
+    border-radius: 25px;
+    filter: blur(18px);
+    z-index: -1;
+}
+
+/* Aspas decorativas */
+.depoimentos .testimonials-row .testimonial-card::before {
+    content: "❝";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 42px;
+    color: #ffc5d6;
+    opacity: 0.75;
+}
+
+/* ============================================================
+   TEXTO DO CARD
+============================================================ */
+.depoimentos .testimonials-row .testimonial-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #555;
     font-style: italic;
-    width: 220px;
-    transition: 0.3s;
+    margin-top: 20px;
+    max-width: 90%;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(178, 83, 120, 0.2);
+/* Nome */
+.depoimentos .testimonials-row .testimonial-card h4 {
+    font-size: 15px;
+    color: #c14467;
+    font-weight: 700;
+    margin-top: 15px;
 }
 
-.testimonial-card h4 {
+/* ============================================================
+   ESTRELAS – Todas centralizadas na MESMA posição
+============================================================ */
+.depoimentos .testimonials-row .testimonial-card .stars {
     margin-top: 10px;
-    color: #a6527a;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #e47aa1;
+    /* Rosa pastel bonito */
     font-weight: bold;
+    text-shadow: 0px 2px 6px rgba(228, 122, 161, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.stars {
-    color: #ffb4d1;
-    font-size: 18px;
-}
 
 /* FOOTER */
 .footer {
@@ -434,5 +505,244 @@ p {
 
     h2 {
         font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container video {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
+
+/* ⭐ CAIXA DE AVALIAÇÃO */
+.avaliacao-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 -20px;
+}
+
+.avaliacao-card {
+    background: #ffe6f0;
+    padding: 30px;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 750px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(178, 83, 120, 0.15);
+    border: 1px solid rgba(178, 83, 120, 0.15);
+    transition: .3s ease;
+}
+
+.avaliacao-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(178, 83, 120, 0.25);
+}
+
+.avaliacao-card h3 {
+    color: #b25378;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.avaliacao-card p {
+    color: #5a4250;
+}
+
+.estrelas i {
+    font-size: 32px;
+    color: #d3b0c6;
+    cursor: pointer;
+    transition: .2s ease;
+    margin: 10px 5px;
+}
+
+.estrelas i:hover,
+.estrelas i.selecionada {
+    color: #ff7faa;
+    transform: scale(1.2);
+}
+
+.comentario {
+    width: 90%;
+    height: 90px;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #d8a2b7;
+    resize: none;
+    font-size: 15px;
+    font-family: "Quicksand";
+    outline: none;
+}
+
+.btn-enviar {
+    background: #b25378;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.btn-enviar:hover {
+    background: #902b5d;
+    transform: scale(1.05);
+}
+
+.msg-sucesso {
+    margin-top: 12px;
+    color: #b25378;
+    font-weight: 600;
+}
+
+/* ⭐ CAIXA DE AVALIAÇÃO – RESPONSIVIDADE */
+@media (max-width: 992px) {
+    .avaliacao-card {
+        width: 85%;
+        padding: 25px;
+        max-width: 700px;
+    }
+
+    .avaliacao-card h3 {
+        font-size: 24px;
+    }
+
+    .estrelas i {
+        font-size: 30px;
+    }
+
+    .comentario {
+        width: 95%;
+        height: 85px;
+    }
+}
+
+@media (max-width: 768px) {
+    .avaliacao-container {
+        margin: 60px 0 -10px;
+    }
+
+    .avaliacao-card {
+        width: 90%;
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .avaliacao-card h3 {
+        font-size: 22px;
+    }
+
+    .avaliacao-card p {
+        font-size: 15px;
+    }
+
+    .estrelas i {
+        font-size: 28px;
+        margin: 8px 4px;
+    }
+
+    .comentario {
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .btn-enviar {
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .avaliacao-card {
+        width: 95%;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .avaliacao-card h3 {
+        font-size: 20px;
+    }
+
+    .estrelas i {
+        font-size: 26px;
+        margin: 6px 3px;
+    }
+
+    .comentario {
+        height: 75px;
+        width: 100%;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn-enviar {
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+    .avaliacao-card {
+        padding: 15px;
+        width: 96%;
+    }
+
+    .avaliacao-card h3 {
+        font-size: 19px;
+    }
+
+    .estrelas i {
+        font-size: 22px;
+        margin: 5px 3px;
+    }
+
+    .comentario {
+        height: 70px;
+        font-size: 13px;
+    }
+
+    .btn-enviar {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* --- MELHORIAS DO TEXTO NO RESPONSIVO (RIGHT-CONTENT) --- */
+@media (max-width: 768px) {
+
+    .right-content {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .right-content h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #b0727a;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .right-content p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        background: #ffeef3;
+        padding: 12px 15px;
+        border-radius: 14px;
+        color: #7a555a;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 330px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
     }
 }

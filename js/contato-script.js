@@ -49,16 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
 /// =====================================
 // ITENS DA BUSCA (coloque seus links reais aqui)
 // =====================================
-const itens = [
-    { nome: "inicio", icone: "fa-star", link: "../index.html" },
-    { nome: "Serviços", icone: "fa-briefcase", link: "./servico.html" },
-    { nome: "Contato", icone: "fa-envelope", link: "./contatos.html" },
-    { nome: "Instagram", icone: "fa-instagram", link: "https://www.instagram.com/gabrielyrochabeauty/" },
-    { nome: "WhatsApp", icone: "fa-whatsapp", link: "https://wa.me/5511997326767" },
-    { nome: "Sobre", icone: "fa-user", link: "./sobre.html" },
-    { nome: "cursos", icone: "fa-user", link: "./curso.html" },
-
+const items = [
+    { nome: "Sobrancelhas", link: "./servico.html", icon: "fa-solid fa-eye" },
+    { nome: "Design", link: "./servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
+    { nome: "Curso de Sobrancelhas", link: "./curso.html", icon: "fa-solid fa-graduation-cap" },
+    { nome: "Curso de extensão de cilios", link: "./curso.html", icon: "fa-solid fa-spa" },
+    { nome: "Agendar", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Sobre mim", link: "./sobre.html", icon: "fa-solid fa-user" },
+    { nome: "Inicio", link: "../index.html", icon: "fa-solid fa-house" },
+    { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
+    { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
 ];
+
 
 // Criar caixa de resultados
 let resultsBox = document.getElementById("search-results");
@@ -176,14 +178,17 @@ document.querySelectorAll('.navbar a').forEach(link => {
 const searchInput = document.querySelector('.search-box input');
 const searchResults = document.getElementById('search-results');
 
-const items = [
-    { nome: "Sobrancelhas", link: "./pages/servico.html", icon: "fa-eye" },
-    { nome: "Design", link: "./pages/servico.html", icon: "fa-star" },
-    { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-book" },
-    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-calendar" },
-    { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-user" }
+const itens = [
+    { nome: "Sobrancelhas", link: "./servico.html", icon: "fa-solid fa-eye" },
+    { nome: "Design", link: "./servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
+    { nome: "Curso de Sobrancelhas", link: "./curso.html", icon: "fa-solid fa-graduation-cap" },
+    { nome: "Curso de extensão de cilios", link: "./curso.html", icon: "fa-solid fa-spa" },
+    { nome: "Agendar", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Sobre mim", link: "./sobre.html", icon: "fa-solid fa-user" },
+    { nome: "Inicio", link: "../index.html", icon: "fa-solid fa-house" },
+    { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
+    { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
 ];
-
 // Mostrar os resultados
 searchInput.addEventListener('input', () => {
     const searchText = searchInput.value.toLowerCase().trim();
