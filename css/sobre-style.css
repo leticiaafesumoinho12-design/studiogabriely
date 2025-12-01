@@ -115,7 +115,7 @@ strong {
 }
 
 .link{
-    background-color: #ff6fa8;
+    background-color: #b25378;
     /* cor rosa suave */
     color: #fff;
     text-decoration: none;
@@ -134,7 +134,8 @@ strong {
 }
 
 .link:hover {
-    background-color: #ff4e93;
+
+    background-color: #902b5d;
     /* cor mais forte no hover */
     transform: scale(1.05);
     /* aumenta levemente */
@@ -225,14 +226,7 @@ strong {
 
 
 /* ===== RODAPÉ ===== */
-.rodape {
-    background-color: #f8cddd;
-    color: #6b3f52;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    border-top: 1px;
-}
+
 /* ===================== */
 /*  RESPONSIVIDADE GERAL */
 /* ===================== */

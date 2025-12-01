@@ -144,7 +144,7 @@ header {
     padding: 12px;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-    margin-top: 8px;
+    margin-top: 100px;
     display: none;
     max-height: 240px;
     overflow-y: auto;
@@ -169,6 +169,8 @@ header {
 #search-results i {
     color: #a6527a;
 }
+
+
 
 /* ================================
    🌸 ANIMAÇÃO
@@ -195,6 +197,13 @@ header {
 
     .search-box {
         margin: auto;
+    }
+}
+
+@media (min-width: 993px) {
+    .search-box {
+        margin-left: 50px;
+        /* você pode aumentar para 60px, 80px, etc */
     }
 }
 
@@ -362,7 +371,7 @@ header {
 }
 
 /* FOOTER */
-.footer {
+footer {
     background-color: #e9b9cb;
     text-align: center;
     padding: 1rem;

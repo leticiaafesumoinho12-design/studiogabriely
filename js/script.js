@@ -50,7 +50,7 @@ function startAutoSlide() {
     autoSlideTimer = setInterval(() => {
         slideIndex++;
         showSlides(slideIndex);
-    }, 4000);
+    }, 3000);
 }
 
 // Função para parar o carrossel automático
@@ -175,7 +175,7 @@ const items = [
     { nome: "Design", link: "./pages/servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
     { nome: "Curso de Sobrancelhas", link: "./pages/curso.html", icon: "fa-solid fa-graduation-cap" },
     { nome: "Curso de extensão de cilios", link: "./pages/curso.html", icon: "fa-solid fa-spa" },
-    { nome: "Agendar", link: "./pages/contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Contato", link: "./pages/contatos.html", icon: "fa-solid fa-calendar-check" },
     { nome: "Sobre mim", link: "./pages/sobre.html", icon: "fa-solid fa-user" },
     { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
     { nome: "WhatsApp", link: "https://wa.me/5511997326767", icon: "fa-brands fa-whatsapp" }
@@ -219,6 +219,7 @@ document.addEventListener("click", (e) => {
 const stars = document.querySelectorAll(".estrelas i");
 const msgSucesso = document.querySelector(".msg-sucesso");
 const comentario = document.querySelector(".comentario");
+const nome = document.querySelector(".comentario-nome");
 
 let notaSelecionada = 0;
 
@@ -237,7 +238,7 @@ stars.forEach(star => {
 // Botão enviar
 document.querySelector(".btn-enviar").addEventListener("click", () => {
     if (notaSelecionada === 0 || comentario.value.trim() === "") {
-        alert("Por favor, selecione uma nota e escreva um comentário.");
+        alert("Por favor, verifique se você preencheu todos os campos de avaliação.");
         return;
     }
 

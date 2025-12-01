@@ -166,28 +166,30 @@
    🌸 BOTÃO ENVIAR
    ================================ */
 .botao-enviar {
-    background-color: #eebbce;
-    color: #4a3c3c;
-    border: transparent;
+    background-color: #b25378 ;
+    /* COR APLICADA */
+    color: #ffffff;
+    /* melhor contraste */
+    border: none;
     padding: 12px 26px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 22px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(144, 43, 93, 0.25);
     transition: all 0.35s ease;
     display: block;
     margin: 30px auto 10px auto;
-    /* centraliza */
     width: 180px;
 }
 
+/* efeito hover */
 .botao-enviar:hover {
-    background: linear-gradient(to bottom, #f9e7f0, #ff9bc2);
-    border-color: #e987ca;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+    background-color: #902b5d;
+    /* um tom mais escuro */
+    box-shadow: 0 6px 16px rgba(144, 43, 93, 0.35);
+    transform: translateY(-3px);
 }
 
 
@@ -195,7 +197,7 @@
    🌸 BOTÕES SIM / NÃO (Primeira Sessão)
    ================================ */
 
-/* Centralizar o grupo */
+/* Centralizar o grupo */   
 .opcoes-sessao {
     display: flex;
     justify-content: center;
@@ -210,13 +212,13 @@
 
 /* Estilo dos botões */
 .botao-sessao {
-    background-color: #eebbce;
-    color: #4a3c3c;
+    background-color: #b25378;
+    color: #ffffff;
     border: 2px solid #ffffff;
     padding: 12px 30px;
     font-size: 15px;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Quicksand', sans-serif;
     transition: all 0.35s ease;
@@ -226,17 +228,19 @@
 
 /* Hover */
 .botao-sessao:hover {
-    background-color: #fda7cf;
-    border-color: #f7ceea;
+    background-color: #902b5d;  
+    /* tom mais claro */
+    border-color: #d98ab3;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* Quando selecionado */
 .opcoes-sessao input[type="radio"]:checked+.botao-sessao {
-    background-color: #fda7cf;
-    border-color: #fdc2e2;
-    color: #4e2f3e;
+    background-color: #b33b75;
+    /* tom mais claro do roxo-vinho */
+    border-color: #d98ab3;
+    color: #ffffff;
     transform: translateY(-4px) scale(1.08);
     box-shadow: 0 9px 20px rgba(0, 0, 0, 0.35);
 }
@@ -368,7 +372,8 @@
 .faq-content.fac-show::-webkit-scrollbar-thumb:hover {
     background: #ff6fa8;
 }
-.close{
+
+.close {
     padding: 3px 8px;
     color: #f1f1f1;
     background-color: #cd316f;

@@ -1,9 +1,26 @@
 /* ===== CONTEÚDO PRINCIPAL ===== */
 main {
-    padding: 60px 20px;
+
     max-width: 1100px;
     margin: 0 auto;
+    padding-top: 40px;
+    /* espaçamento para descer a seção */
 }
+
+.titulo-servicos {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #b87ba1;
+
+    text-align: center;
+    padding: 12px 25px;
+
+
+    display: block;
+    width: fit-content;
+    margin: 20px auto 30px auto;
+}
+
 
 /* ===== SEÇÕES DE SERVIÇOS ===== */
 .servico {
@@ -11,7 +28,8 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    /* REDUZIDO */
     gap: 40px;
     background-color: #ffffff;
     border-radius: 20px;
@@ -79,8 +97,6 @@ main {
     margin: 40px 0 20px 0;
 }
 
-
-
 /* ===== TABELA DE PREÇOS ===== */
 .tabela-precos {
     background-color: #fff;
@@ -88,7 +104,8 @@ main {
     padding: 40px 50px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     text-align: left;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+    /* REDUZIDO */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -110,7 +127,6 @@ main {
     display: inline-block;
 }
 
-/* Alinhamento cabeçalho centralizado */
 .tabela-precos th {
     background-color: #f8d8e7;
     color: #000;
@@ -123,7 +139,6 @@ main {
     text-align: center;
 }
 
-/* Alinhamento do conteúdo à esquerda, exceto preço */
 .tabela-precos td {
     background-color: #fff8fb;
     color: #444;
@@ -135,7 +150,6 @@ main {
     text-align: left !important;
 }
 
-/* Ajuste colunas largura fixa para melhor alinhamento */
 .tabela-precos table {
     width: 100%;
     border-collapse: separate;
@@ -144,7 +158,6 @@ main {
     table-layout: fixed;
 }
 
-/* Larguras proporcionais para colunas */
 .tabela-precos th:nth-child(1),
 .tabela-precos td:nth-child(1) {
     width: 30%;
@@ -159,14 +172,14 @@ main {
 .tabela-precos td:nth-child(3) {
     width: 20%;
     text-align: right !important;
-    /* preço alinhado à direita */
 }
 
 .tabela-precos tr:hover td {
     background-color: #ffeef7;
     transform: scale(1.01);
 }
-/*CATÁLOGO*/
+
+/* CATÁLOGO */
 .catalogo {
     background-color: white;
     padding: 20px;
@@ -174,7 +187,7 @@ main {
     text-align: center;
     font-family: "Poppins", sans-serif;
     color: #4b4b4b;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin: 20px auto;
     width: fit-content;
 }
@@ -186,7 +199,7 @@ main {
 }
 
 .catalogo a {
-    color: #d63384; /* cor rosê elegante */
+    color: #d63384;
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s ease;
@@ -197,14 +210,14 @@ main {
     text-decoration: underline;
 }
 
-
 /* ===== SEÇÃO DE DICAS ===== */
 .dicas {
     background-color: #fff6f8;
     padding: 60px 20px;
     text-align: center;
     border-radius: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    /* REDUZIDO */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -235,13 +248,12 @@ main {
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-   text-align: left;
+    text-align: left;
 }
 
 .dica-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-   
 }
 
 .dica-card h3 {
@@ -251,19 +263,16 @@ main {
 }
 
 /* ============================== */
-/* RESPONSIVO            */
+/* RESPONSIVO */
 /* ============================== */
 
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
-
-    /* Ajuste para quebra em coluna, mas com imagens lado a lado ainda */
     .servico {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Permite 2 imagens lado a lado */
     .servico-imagens img {
         max-width: 48%;
     }
@@ -275,8 +284,6 @@ main {
 
 /* Celulares grandes (até 768px) */
 @media (max-width: 768px) {
-
-    /* 👉 Texto acima das imagens no responsivo */
     .servico {
         flex-direction: column;
         text-align: center;
@@ -316,63 +323,21 @@ main {
     }
 }
 
-.tabela-precos {
-    width: 100%;
-    margin: 20px auto;
-}
-
-.tabela-precos table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff8fb;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.tabela-precos th {
-    background-color: #f2cade;
-    padding: 15px;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #000;
-}
-
-.tabela-precos td {
-    padding: 15px;
-    border-bottom: 1px solid #f4dce9;
-    font-size: 1rem;
-}
-
-.tabela-precos tr:last-child td {
-    border-bottom: none;
-}
-
-.tabela-precos tr:hover {
-    background-color: #ffeef7;
-}
-
-
-/* ============================
-   RESPONSIVIDADE (até 480px)
-   — ROLAGEM LATERAL
-============================ */
+/* ============================ */
+/* RESPONSIVIDADE (até 480px) */
+/* ============================ */
 
 @media (max-width: 480px) {
-
     .tabela-precos {
         width: 100%;
         overflow-x: auto;
-        /* 👉 faz rolar pro lado */
         display: block;
         white-space: nowrap;
-        /* 👉 evita quebra */
         padding-bottom: 10px;
     }
 
     .tabela-precos table {
         min-width: 600px;
-        /* 👉 largura mínima para gerar scroll */
     }
 
     .servico,
@@ -383,11 +348,27 @@ main {
 
     .servico-texto {
         order: 0 !important;
-        /* texto sempre vem primeiro */
     }
 
     .servico-imagens {
         order: 1 !important;
-        /* imagens depois */
+    }
+}
+
+.titulo-servicos {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .titulo-servicos {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        /* centraliza */
+        font-size: 1.9rem;
+        font-weight: 700;
+        text-align: center;
+        color: #b25770;
+        padding: 10px 20px;
     }
 }

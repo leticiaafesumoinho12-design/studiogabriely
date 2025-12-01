@@ -2,21 +2,31 @@
 main {
     display: flex;
     justify-content: center;
-    gap: 15rem;
+    gap: 5rem;
     flex-wrap: wrap;
 }
 
+.titulo-inicio {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #b87ba1;
+    /* rosa do menu ativo */
+    text-align: center;
+    margin: 20px 0 30px 0;
+    padding: 12px 25px;
+    /* rosa clarinho combinando com o header */
+    display: inline-block;
+   
+}
 /* COLUNA ESQUERDA */
 .left-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     max-width: 520px;
     align-items: center;
 }
 
 .left-content .description {
-    margin: 1.2rem 0;
     color: #4b2f3c;
     text-align: center;
 }
@@ -52,10 +62,6 @@ main {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-.testimonial-card {
-    text-align: center;
-}
-
 .dot {
     cursor: pointer;
     height: 10px;
@@ -70,7 +76,6 @@ main {
     background-color: #a6527a;
 }
 
-/* ANIMAÇÃO */
 @keyframes fade {
     from {
         opacity: 0.4;
@@ -96,7 +101,6 @@ main {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-
 
 /* COLUNA DIREITA */
 .right-content {
@@ -155,7 +159,7 @@ p {
     margin: 18px 0 10px;
 }
 
-/* CARDS DE INFO */
+/* INFO CARDS */
 .info-card {
     display: flex;
     gap: 10px;
@@ -185,7 +189,7 @@ p {
     color: #c7518c;
 }
 
-/* ÍCONES REDES SOCIAIS */
+/* REDES SOCIAIS */
 .icones-redes {
     display: flex;
     gap: 14px;
@@ -207,19 +211,8 @@ p {
 .icone-link:hover {
     transform: translateY(-6px) scale(1.12) rotate(-5deg);
     background: white;
-
 }
 
-.icone-link i {
-    transition: .3s ease;
-}
-
-.icone-link:hover i {
-    transform: scale(1.2) rotate(8deg);
-    filter: brightness(1.25);
-}
-
-/* INSTAGRAM */
 .instagram i {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #ffb548 45%, #fc5e62 60%, #a745c3 90%);
     -webkit-background-clip: text;
@@ -228,15 +221,12 @@ p {
     font-size: 26px;
 }
 
-/* WHATSAPP */
 .whatsapp i {
     color: #25D366;
     font-size: 28px;
 }
 
-/* ============================================================
-   TÍTULO DOS DEPOIMENTOS
-============================================================ */
+/* DEPOIMENTOS – TÍTULO */
 .depoimentos h2 {
     text-align: center;
     width: 100%;
@@ -247,9 +237,7 @@ p {
     letter-spacing: 1px;
 }
 
-/* ============================================================
-   CONTAINER DOS CARDS
-============================================================ */
+/* DEPOIMENTOS – CONTAINER */
 .depoimentos .testimonials-row {
     display: flex;
     justify-content: center;
@@ -259,14 +247,11 @@ p {
     padding: 50px 20px;
 }
 
-/* ============================================================
-   CARD
-============================================================ */
-.depoimentos .testimonials-row .testimonial-card {
+/* DEPOIMENTOS – CARD */
+.depoimentos .testimonial-card {
     background: #fff;
     width: 260px;
     height: 260px;
-    /* Altura padronizada para alinhamento perfeito */
     padding: 25px;
     border-radius: 20px;
     border: 1px solid rgba(255, 182, 193, 0.45);
@@ -278,18 +263,15 @@ p {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    /* Centraliza tudo */
     align-items: center;
 }
 
-/* Hover */
-.depoimentos .testimonials-row .testimonial-card:hover {
+.depoimentos .testimonial-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* Glow rosado */
-.depoimentos .testimonials-row .testimonial-card:hover::after {
+.depoimentos .testimonial-card:hover::after {
     content: "";
     position: absolute;
     inset: -15px;
@@ -299,8 +281,7 @@ p {
     z-index: -1;
 }
 
-/* Aspas decorativas */
-.depoimentos .testimonials-row .testimonial-card::before {
+.depoimentos .testimonial-card::before {
     content: "❝";
     position: absolute;
     top: -10px;
@@ -310,10 +291,7 @@ p {
     opacity: 0.75;
 }
 
-/* ============================================================
-   TEXTO DO CARD
-============================================================ */
-.depoimentos .testimonials-row .testimonial-card p {
+.depoimentos .testimonial-card p {
     font-size: 14px;
     line-height: 1.55;
     color: #555;
@@ -322,23 +300,18 @@ p {
     max-width: 90%;
 }
 
-/* Nome */
-.depoimentos .testimonials-row .testimonial-card h4 {
+.depoimentos .testimonial-card h4 {
     font-size: 15px;
     color: #c14467;
     font-weight: 700;
     margin-top: 15px;
 }
 
-/* ============================================================
-   ESTRELAS – Todas centralizadas na MESMA posição
-============================================================ */
-.depoimentos .testimonials-row .testimonial-card .stars {
+.depoimentos .testimonial-card .stars {
     margin-top: 10px;
     font-size: 20px;
     letter-spacing: 3px;
     color: #e47aa1;
-    /* Rosa pastel bonito */
     font-weight: bold;
     text-shadow: 0px 2px 6px rgba(228, 122, 161, 0.3);
     display: flex;
@@ -347,175 +320,12 @@ p {
 }
 
 
-/* FOOTER */
-.footer {
-    background-color: #e9b9cb;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-    color: #3d2d34;
-    font-size: 14px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* MENU MOBILE — VISUAL PADRÃO (SEM FUNCIONAR — SEM RESPONSIVIDADE) */
+/* MENU MOBILE */
 .menu-toggle {
     display: none;
 }
 
-/* responsividade*/
-/* Notebook médio - ajusta levemente colunas */
-@media (max-width: 1200px) {
-    main {
-        gap: 8rem;
-    }
-}
-
-/* Tablet horizontal */
-@media (max-width: 992px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .left-content,
-    .right-content {
-        max-width: 90%;
-    }
-
-    .imgslide {
-        width: 100%;
-        height: auto;
-    }
-
-    .image-highlight img {
-        max-width: 100%;
-    }
-}
-
-/* Tablet vertical / celular grande */
-@media (max-width: 768px) {
-
-    main {
-        padding: 0 15px;
-        gap: 3rem;
-    }
-
-    h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .imgslide {
-        width: 100%;
-        height: auto;
-    }
-
-    .slideshow-container {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .video-container video {
-        max-width: 100%;
-    }
-
-    .testimonials-row {
-        gap: 18px;
-    }
-
-    .testimonial-card {
-        width: 90%;
-        max-width: 260px;
-    }
-}
-
-/* Celular */
-@media (max-width: 480px) {
-
-    main {
-        gap: 2rem;
-        padding: 0 10px;
-    }
-
-    .left-content {
-        gap: 1.5rem;
-    }
-
-    .imgslide {
-        width: 100%;
-        height: auto;
-    }
-
-    .slideshow-container {
-        max-width: 100%;
-    }
-
-    .text {
-        font-size: 14px;
-    }
-
-    .right-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .right-content p {
-        text-align: center;
-    }
-
-    .extra-content {
-        padding: 18px;
-    }
-
-    .info-card {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .icones-redes {
-        justify-content: center;
-    }
-
-    .icone-link {
-        width: 40px;
-        height: 40px;
-    }
-
-    .testimonial-card {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-/* Celulares muito pequenos */
-@media (max-width: 380px) {
-    .imgslide {
-        border-radius: 12px;
-    }
-
-    .testimonial-card {
-        padding: 18px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 480px) {
-    .video-container video {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-}
-
-/* ⭐ CAIXA DE AVALIAÇÃO */
+/* AVALIAÇÃO */
 .avaliacao-container {
     width: 100%;
     display: flex;
@@ -577,6 +387,19 @@ p {
     outline: none;
 }
 
+.comentario-nome {
+    width: 90%;
+    height: 50px;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #d8a2b7;
+    resize: none;
+    font-size: 15px;
+    font-family: "Quicksand";
+    outline: none;
+}
+
 .btn-enviar {
     background: #b25378;
     border: none;
@@ -600,8 +423,37 @@ p {
     font-weight: 600;
 }
 
-/* ⭐ CAIXA DE AVALIAÇÃO – RESPONSIVIDADE */
+/* RESPONSIVO */
+
+/* 1200px */
+@media (max-width: 1200px) {
+    main {
+        gap: 8rem;
+    }
+}
+
+/* 992px */
 @media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .left-content,
+    .right-content {
+        max-width: 90%;
+    }
+
+    .imgslide {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-highlight img {
+        max-width: 100%;
+    }
+
     .avaliacao-card {
         width: 85%;
         padding: 25px;
@@ -622,7 +474,67 @@ p {
     }
 }
 
+/* 768px */
 @media (max-width: 768px) {
+
+    main {
+        padding: 0 15px;
+        gap: 3rem;
+        margin-top: 1rem;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        max-width: 450px;
+        margin: 1rem auto;
+        border-radius: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+        padding: 6px 10px;
+        bottom: 20px;
+    }
+
+    .right-content {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-radius: 22px;
+    }
+
+    .right-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .right-content p {
+        font-size: 1.05rem;
+        padding: 12px 15px;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    .testimonials-row {
+        gap: 18px;
+    }
+
+    .testimonial-card {
+        width: 90%;
+        max-width: 260px;
+    }
+
     .avaliacao-container {
         margin: 60px 0 -10px;
     }
@@ -630,7 +542,6 @@ p {
     .avaliacao-card {
         width: 90%;
         padding: 22px;
-        border-radius: 18px;
     }
 
     .avaliacao-card h3 {
@@ -643,7 +554,6 @@ p {
 
     .estrelas i {
         font-size: 28px;
-        margin: 8px 4px;
     }
 
     .comentario {
@@ -657,11 +567,11 @@ p {
     }
 }
 
+/* 560px */
 @media (max-width: 560px) {
     .avaliacao-card {
         width: 95%;
         padding: 18px;
-        border-radius: 16px;
     }
 
     .avaliacao-card h3 {
@@ -670,14 +580,12 @@ p {
 
     .estrelas i {
         font-size: 26px;
-        margin: 6px 3px;
     }
 
     .comentario {
         height: 75px;
         width: 100%;
         font-size: 13px;
-        padding: 10px;
     }
 
     .btn-enviar {
@@ -686,6 +594,51 @@ p {
     }
 }
 
+/* 480px */
+@media (max-width: 480px) {
+
+    main {
+        gap: 2rem;
+        padding: 0 10px;
+    }
+
+    .left-content {
+        gap: 1.5rem;
+    }
+
+    .right-content,
+    .right-content p {
+        text-align: center;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .video-container video {
+        border-radius: 10px;
+    }
+
+    .extra-content {
+        padding: 18px;
+    }
+
+    .icones-redes {
+        justify-content: center;
+    }
+
+    .icone-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* 430px */
 @media (max-width: 430px) {
     .avaliacao-card {
         padding: 15px;
@@ -698,12 +651,10 @@ p {
 
     .estrelas i {
         font-size: 22px;
-        margin: 5px 3px;
     }
 
     .comentario {
         height: 70px;
-        font-size: 13px;
     }
 
     .btn-enviar {
@@ -713,36 +664,18 @@ p {
     }
 }
 
-/* --- MELHORIAS DO TEXTO NO RESPONSIVO (RIGHT-CONTENT) --- */
+.titulo-inicio {
+    display: none;
+}
+
 @media (max-width: 768px) {
-
-    .right-content {
-        padding: 20px;
-        width: 100%;
+    .titulo-inicio {
+        display: block;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .right-content h2 {
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: #b0727a;
-        margin-bottom: 10px;
-        letter-spacing: 0.5px;
-    }
-
-    .right-content p {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        background: #ffeef3;
-        padding: 12px 15px;
-        border-radius: 14px;
-        color: #7a555a;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 330px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #b25770;
+        margin-top: 35px;
+        margin-bottom: 25px;
     }
 }
