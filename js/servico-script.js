@@ -78,6 +78,24 @@ function buscar() {
         resultsBox.style.display = "block";
     }
 }
+// ================================
+// 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
+// ================================
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar ul');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active'); // animação do X
+    navMenu.classList.toggle('active');   // abre o menu
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
 
 
 // ================================
