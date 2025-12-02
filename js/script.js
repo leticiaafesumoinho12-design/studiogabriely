@@ -236,6 +236,7 @@ stars.forEach(star => {
 });
 
 // Botão enviar
+
 document.querySelector(".btn-enviar").addEventListener("click", () => {
     if (notaSelecionada === 0 || comentario.value.trim() === "") {
         alert("Por favor, verifique se você preencheu todos os campos de avaliação.");
@@ -243,10 +244,14 @@ document.querySelector(".btn-enviar").addEventListener("click", () => {
     }
 
     msgSucesso.style.display = "block";
-    comentario.value = "";
-    stars.forEach(s => s.classList.remove("selecionada"));
-    notaSelecionada = 0;
 
-    setTimeout(() => msgSucesso.style.display = "none", 3000);
+    // 🟣 FAZ SUMIR OS CAMPOS
+    document.querySelector(".avalie-gaby").style.display = "none";
+    document.querySelector(".comentario-nome").style.display = "none";
+    document.querySelector(".comentario").style.display = "none";
+    document.querySelector(".estrelas").style.display = "none";
+    document.querySelector(".btn-enviar").style.display = "none";
+
+    setTimeout(() => msgSucesso.style.display = "none", 9000);
 });
 
