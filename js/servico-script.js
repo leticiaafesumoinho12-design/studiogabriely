@@ -6,7 +6,7 @@ const items = [
     { nome: "Design", link: "./servico.html", icon: "fa-solid fa-wand-magic-sparkles" },
     { nome: "Curso de Sobrancelhas", link: "./curso.html", icon: "fa-solid fa-graduation-cap" },
     { nome: "Curso de extensão de cilios", link: "./curso.html", icon: "fa-solid fa-spa" },
-    { nome: "Agendar", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
+    { nome: "Contato", link: "./contatos.html", icon: "fa-solid fa-calendar-check" },
     { nome: "Sobre mim", link: "./sobre.html", icon: "fa-solid fa-user" },
     { nome: "Inicio", link: "../index.html", icon: "fa-solid fa-house" },
     { nome: "Instagram", link: "https://www.instagram.com/gabrielyrochabeauty/", icon: "fa-brands fa-instagram" },
@@ -16,7 +16,24 @@ const items = [
 let resultsBox = document.getElementById("search-results");
 let input = document.querySelector(".search-box input");
 let button = document.querySelector(".search-box button");
+// ================================
+// 🌸 BOTÃO HAMBÚRGUER + MENU MOBILE
+// ================================
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar ul');
 
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active'); // animação do X
+    navMenu.classList.toggle('active');   // abre o menu
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
 
 // ================================
 //  FUNÇÃO DE SIMILARIDADE
@@ -45,7 +62,7 @@ function buscar() {
         return;
     }
 
-    const resultados = itens.filter(item =>
+    const resultados = items.filter(item =>
         item.nome.toLowerCase().includes(texto) ||
         similaridade(texto, item.nome) > 0.3
     );
@@ -56,7 +73,7 @@ function buscar() {
             div.classList.add("item");
 
             div.innerHTML = `
-                <i class="fa ${item.icone}"></i>
+                <i class="${item.icon}"></i>
                 <span>${item.nome}</span>
             `;
 
@@ -110,7 +127,6 @@ input.addEventListener("input", () => {
     delay = setTimeout(buscar, 250);
 });
 
-
 document.addEventListener("click", (e) => {
     if (!document.querySelector(".search-box").contains(e.target)) {
         resultsBox.style.display = "none";
@@ -123,24 +139,4 @@ input.addEventListener("focus", () => {
             input.scrollIntoView({ behavior: "smooth", block: "center" });
         }, 300);
     }
-});
-
-
-// ================================
-// BOTÃO HAMBÚRGUER + MENU MOBILE
-// ================================
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.navbar ul');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Fecha ao clicar em um link
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
 });
